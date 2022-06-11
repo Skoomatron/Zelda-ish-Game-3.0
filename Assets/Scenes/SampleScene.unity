@@ -10154,7 +10154,11 @@ MonoBehaviour:
   health: 5
   enemyName: Orc Grunt
   baseAttack: 1
-  moveSpeed: 8
+  moveSpeed: 2
+  target: {fileID: 0}
+  chaseRadius: 5
+  attackRadius: 2
+  homePosition: {fileID: 0}
 --- !u!1 &585827706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5948162110781330763, guid: c3288468f15c7410583dde7a6f2a417f, type: 3}
@@ -19457,7 +19461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  speed: 14
+  speed: 18
 --- !u!50 &611030002
 Rigidbody2D:
   serializedVersion: 4

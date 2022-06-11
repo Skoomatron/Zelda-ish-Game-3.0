@@ -8,6 +8,7 @@ public class BasicOrc : Enemy
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
+    private Animator animator;
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
@@ -20,9 +21,17 @@ public class BasicOrc : Enemy
 
     void CheckDistance()
     {
-        if (Vector3.Distance(target.position, transform.position) <= chaseRadius)
+        animator = GetComponent<Animator>();
+
+        if (Vector3.Distance
+            (target.position, transform.position) <= chaseRadius
+            && Vector3.Distance(target.position, transform.position) > attackRadius
+        )
         {
+            animator.SetBool("Moving", true);
             transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        } else {
+            animator.SetBool("Moving", false);
         }
     }
 }
