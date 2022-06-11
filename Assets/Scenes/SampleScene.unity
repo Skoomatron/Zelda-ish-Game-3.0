@@ -23468,6 +23468,7 @@ GameObject:
   - component: {fileID: 2031252195}
   - component: {fileID: 2031252197}
   - component: {fileID: 2031252199}
+  - component: {fileID: 2031252200}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Breakable
@@ -23588,6 +23589,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2031252200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031252194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222772dafecde44749fc796735554654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2046942813
 GameObject:
   m_ObjectHideFlags: 0
