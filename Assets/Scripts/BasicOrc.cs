@@ -22,7 +22,7 @@ public class BasicOrc : Enemy
     {
         if (Vector3.Distance(target.position, transform.position) <= chaseRadius)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, attackRadius);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
         }
     }
 }
