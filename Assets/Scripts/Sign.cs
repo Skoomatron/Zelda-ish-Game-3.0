@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Sign : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
@@ -14,8 +13,6 @@ public class Sign : MonoBehaviour
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerInRange)

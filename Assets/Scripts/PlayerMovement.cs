@@ -21,8 +21,9 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        animator.SetFloat("MoveX", 0);
+        animator.SetFloat("MoveY", -1);
     }
-
     void Update()
     {
         change = Vector3.zero;
@@ -37,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
             UpdateAnimationAndMove();
         }
     }
-
     private IEnumerator AttackCo()
     {
         animator.SetBool("Attacking", true);

@@ -9,8 +9,6 @@ public class PotSmashing : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -19,5 +17,12 @@ public class PotSmashing : MonoBehaviour
     public void Smash()
     {
         anim.SetBool("Smashed", true);
+        StartCoroutine(breakCo());
+    }
+
+    IEnumerator breakCo()
+    {
+        yield return new WaitForSeconds(.2f);
+        this.gameObject.SetActive(false);
     }
 }
