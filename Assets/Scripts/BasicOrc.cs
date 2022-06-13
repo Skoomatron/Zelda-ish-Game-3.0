@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicOrc : Enemy
 {
+    private Rigidbody2D myRigidbody;
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
@@ -11,6 +12,7 @@ public class BasicOrc : Enemy
     private Animator animator;
     void Start()
     {
+        myRigidbody = GetComponent<Rigidbody2D>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
@@ -29,7 +31,8 @@ public class BasicOrc : Enemy
         )
         {
             animator.SetBool("Moving", true);
-            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            myRigidbody.MovePosition(temp);
         } else {
             animator.SetBool("Moving", false);
         }
