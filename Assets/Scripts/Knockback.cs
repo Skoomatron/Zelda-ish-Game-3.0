@@ -5,6 +5,7 @@ using UnityEngine;
 public class Knockback : MonoBehaviour
 {
     public float thrust;
+    public float knockTime;
 
     void Start()
     {
@@ -27,8 +28,18 @@ public class Knockback : MonoBehaviour
                 Vector2 differential = enemy.transform.position - transform.position;
                 differential = differential.normalized * thrust;
                 enemy.AddForce(differential, ForceMode2D.Impulse);
-                enemy.isKinematic = true;
+                StartCoroutine(KnockCo(enemy));
             }
+        }
+    }
+
+    private IEnumerator KnockCo(Rigidbody2D enemy)
+    {
+        if (enemy != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            enemy.velocity = Vector2.zero;
+            enemy.isKinematic = true;
         }
     }
 }
