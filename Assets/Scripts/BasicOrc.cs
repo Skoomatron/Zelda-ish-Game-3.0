@@ -10,9 +10,11 @@ public class BasicOrc : Enemy
     public float attackRadius;
     public Transform homePosition;
     private Animator animator;
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        // animator = GetComponent<animator>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
