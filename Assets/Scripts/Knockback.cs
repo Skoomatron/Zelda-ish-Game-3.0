@@ -6,17 +6,14 @@ public class Knockback : MonoBehaviour
 {
     public float thrust;
     public float knockTime;
-
     void Start()
     {
 
     }
-
     void Update()
     {
 
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemies"))
@@ -24,7 +21,6 @@ public class Knockback : MonoBehaviour
             Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
             if (enemy != null)
             {
-                enemy.isKinematic = false;
                 Vector2 differential = enemy.transform.position - transform.position;
                 differential = differential.normalized * thrust;
                 enemy.AddForce(differential, ForceMode2D.Impulse);
@@ -39,7 +35,6 @@ public class Knockback : MonoBehaviour
         {
             yield return new WaitForSeconds(knockTime);
             enemy.velocity = Vector2.zero;
-            enemy.isKinematic = true;
         }
     }
 }
