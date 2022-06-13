@@ -21,7 +21,7 @@ public class Knockback : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemies"))
         {
             Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
-            if (enemy)
+            if (enemy != null)
             {
                 enemy.isKinematic = false;
                 Vector2 differential = enemy.transform.position - transform.position;
