@@ -9,7 +9,7 @@ public class BasicOrc : Enemy
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
-    private Animator animator;
+    public Animator animator;
 
     void Start()
     {
@@ -31,14 +31,13 @@ public class BasicOrc : Enemy
             (target.position, transform.position) <= chaseRadius
             && Vector3.Distance(target.position, transform.position) > attackRadius
             && currentState == EnemyState.idle || currentState == EnemyState.walk
+            && currentState != EnemyState.stagger
         )
         {
             animator.SetBool("Moving", true);
             Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             myRigidbody.MovePosition(temp);
             ChangeState(EnemyState.walk);
-        } else {
-            animator.SetBool("Moving", false);
         }
     }
 
