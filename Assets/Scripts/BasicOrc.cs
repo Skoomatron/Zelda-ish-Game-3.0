@@ -13,12 +13,12 @@ public class BasicOrc : Enemy
 
     void Start()
     {
+        currentState = EnemyState.idle;
         myRigidbody = GetComponent<Rigidbody2D>();
-        // animator = GetComponent<animator>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         CheckDistance();
     }
@@ -30,13 +30,23 @@ public class BasicOrc : Enemy
         if (Vector3.Distance
             (target.position, transform.position) <= chaseRadius
             && Vector3.Distance(target.position, transform.position) > attackRadius
+            && currentState == EnemyState.idle || currentState == EnemyState.walk
         )
         {
             animator.SetBool("Moving", true);
             Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             myRigidbody.MovePosition(temp);
+            ChangeState(EnemyState.walk);
         } else {
             animator.SetBool("Moving", false);
+        }
+    }
+
+    private void ChangeState(EnemyState newState)
+    {
+        if (currentState != newState)
+        {
+            currentState = newState;
         }
     }
 }

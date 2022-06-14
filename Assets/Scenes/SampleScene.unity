@@ -10151,6 +10151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ecd63d2a1bbd4326a514910bd7f3c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   health: 5
   enemyName: Orc Grunt
   baseAttack: 1
@@ -19471,7 +19472,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611029998}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -19542,8 +19543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 10
-  knockTime: 2
+  thrust: 2
+  knockTime: 0.5
 --- !u!1 &629571389
 GameObject:
   m_ObjectHideFlags: 0
