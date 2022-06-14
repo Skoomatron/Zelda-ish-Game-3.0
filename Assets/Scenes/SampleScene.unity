@@ -306,9 +306,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 365485551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f17f00bb7929428a9faa20d4bce1191, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thrust: 5
+  knockTime: 0.2
 --- !u!1 &426124752
 GameObject:
   m_ObjectHideFlags: 0
@@ -9998,6 +10000,7 @@ GameObject:
   - component: {fileID: 522611114}
   - component: {fileID: 522611113}
   - component: {fileID: 522611115}
+  - component: {fileID: 522611116}
   m_Layer: 0
   m_Name: Orc
   m_TagString: Enemies
@@ -10161,6 +10164,32 @@ MonoBehaviour:
   attackRadius: 1.2
   homePosition: {fileID: 0}
   animator: {fileID: 0}
+--- !u!61 &522611116
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522611109}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03124237, y: -0.4123969}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.625, y: 2.25}
+    newSize: {x: 1.625, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0126495, y: 1.4252062}
+  m_EdgeRadius: 0
 --- !u!1 &585827706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5948162110781330763, guid: c3288468f15c7410583dde7a6f2a417f, type: 3}
@@ -19499,7 +19528,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.055132538, y: -0.90417445}
+  m_Offset: {x: -0.055132538, y: -0.9002032}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19510,7 +19539,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8972499, y: 0.4416511}
+  m_Size: {x: 0.8972499, y: 0.44959354}
   m_EdgeRadius: 0
 --- !u!95 &611030004
 Animator:
@@ -19532,20 +19561,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &611030005
-MonoBehaviour:
+--- !u!61 &611030005
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611029998}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrust: 5
-  knockTime: 0.2
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.035742402, y: -0.3971386}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.625, y: 2.25}
+    newSize: {x: 1.625, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5844953, y: 1.4716072}
+  m_EdgeRadius: 0
 --- !u!1 &629571389
 GameObject:
   m_ObjectHideFlags: 0
@@ -19944,9 +19985,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 863256324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f17f00bb7929428a9faa20d4bce1191, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thrust: 5
+  knockTime: 0.2
 --- !u!1 &976977505
 GameObject:
   m_ObjectHideFlags: 0
@@ -20019,9 +20062,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 976977505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f17f00bb7929428a9faa20d4bce1191, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thrust: 5
+  knockTime: 0.2
 --- !u!1 &1344399006
 GameObject:
   m_ObjectHideFlags: 0
@@ -23666,9 +23711,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1753482162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f17f00bb7929428a9faa20d4bce1191, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thrust: 5
+  knockTime: 0.2
 --- !u!1 &2031252194
 GameObject:
   m_ObjectHideFlags: 0
