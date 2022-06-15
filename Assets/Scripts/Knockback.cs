@@ -25,7 +25,6 @@ public class Knockback : MonoBehaviour
                 Vector2 differential = hit.transform.position - transform.position;
                 differential = differential.normalized * thrust;
                 hit.AddForce(differential, ForceMode2D.Impulse);
-                StartCoroutine(KnockCo(hit));
             }
         }
     }
