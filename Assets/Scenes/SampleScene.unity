@@ -10001,6 +10001,7 @@ GameObject:
   - component: {fileID: 522611113}
   - component: {fileID: 522611115}
   - component: {fileID: 522611116}
+  - component: {fileID: 522611117}
   m_Layer: 0
   m_Name: Orc
   m_TagString: Enemies
@@ -10190,6 +10191,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.88713074, y: 1.7622566}
   m_EdgeRadius: 0
+--- !u!114 &522611117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522611109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 2
+  knockTime: 0.2
 --- !u!1 &585827706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5948162110781330763, guid: c3288468f15c7410583dde7a6f2a417f, type: 3}
@@ -19403,6 +19418,7 @@ GameObject:
   - component: {fileID: 611030004}
   - component: {fileID: 611030006}
   - component: {fileID: 611030007}
+  - component: {fileID: 611030008}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -19600,6 +19616,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f17f00bb7929428a9faa20d4bce1191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &611030008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611029998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 2
+  knockTime: 0.2
 --- !u!1 &629571389
 GameObject:
   m_ObjectHideFlags: 0
