@@ -8,7 +8,7 @@ public class Knockback : MonoBehaviour
     public float knockTime;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Breakable"))
+        if (collision.gameObject.CompareTag("Breakable") && this.gameObject.CompareTag("Player"))
         {
             collision.GetComponent<PotSmashing>().Smash();
         }
