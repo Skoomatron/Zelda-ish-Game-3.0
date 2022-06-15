@@ -7,6 +7,8 @@ public class BasicOrc : Enemy
     private Rigidbody2D myRigidbody;
     public Transform target;
     public float testing1;
+        public float testing2;
+
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
