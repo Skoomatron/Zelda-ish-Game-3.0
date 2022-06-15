@@ -18,13 +18,18 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
-    void Start()
-    {
 
+    public void Knock(Rigidbody2D myRigidbody, float knockTime)
+    {
+        StartCoroutine(KnockCo(myRigidbody, knockTime));
     }
-
-    void Update()
+    private IEnumerator KnockCo(Rigidbody2D myRigidbody, float knockTime)
     {
-
+        if (myRigidbody != null && currentState != EnemyState.stagger)
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRigidbody.velocity = Vector2.zero;
+            myRigidbody.GetComponent<Enemy>().currentState = EnemyState.idle;
+        }
     }
 }
