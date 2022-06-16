@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 365485554}
   m_Layer: 0
   m_Name: AttackUpBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19960,7 +19960,7 @@ GameObject:
   - component: {fileID: 863256327}
   m_Layer: 0
   m_Name: AttackDownBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20046,7 +20046,7 @@ GameObject:
   - component: {fileID: 976977508}
   m_Layer: 0
   m_Name: AttackRightBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23692,7 +23692,7 @@ GameObject:
   - component: {fileID: 1753482165}
   m_Layer: 0
   m_Name: AttackLeftBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
