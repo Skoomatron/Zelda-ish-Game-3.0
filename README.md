@@ -14,6 +14,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+
+
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
 <a href="https://trail-xylophone-046.notion.site/Progress-2-0-Starting-Over-8834d79e2b1d45f4b259cb7644dec58b">Check Out My Project Notion!</a>
@@ -31,3 +33,9 @@
 ### Assets
 
 ![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)
+
+<a href="https://finalbossblues.itch.io/">Final Boss Blues On Itch.io</a>
+<a href="https://opengameart.org/content/zelda-like-tilesets-and-sprites">ArMM1998 On OpenGameArt.Org</a>
+
+
+https://finalbossblues.itch.io/
