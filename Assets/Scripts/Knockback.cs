@@ -6,8 +6,10 @@ public class Knockback : MonoBehaviour
 {
     public float thrust;
     public float knockTime;
+    public float damage;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // could add a check here to see if the player is in attack state on the pot script initiation
         if (collision.gameObject.CompareTag("Breakable") && this.gameObject.CompareTag("Player"))
         {
             collision.GetComponent<PotSmashing>().Smash();
@@ -23,7 +25,7 @@ public class Knockback : MonoBehaviour
                 if (collision.gameObject.CompareTag("Enemies"))
                 {
                     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
-                    collision.GetComponent<Enemy>().Knock(hit, knockTime);
+                    collision.GetComponent<Enemy>().Knock(hit, knockTime, damage);
                 }
                 if (collision.gameObject.CompareTag("Player"))
                 {
