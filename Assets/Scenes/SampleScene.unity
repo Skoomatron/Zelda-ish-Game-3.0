@@ -10156,6 +10156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  maxHealth: {fileID: 11400000, guid: db06ec98e425c46378eed691f0fe1679, type: 2}
   health: 5
   enemyName: Orc Grunt
   baseAttack: 1

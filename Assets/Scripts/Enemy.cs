@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
 
-    private void Start()
+    private void Awake()
     {
         health = maxHealth.initialValue;
     }
