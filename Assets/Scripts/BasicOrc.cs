@@ -32,11 +32,42 @@ public class BasicOrc : Enemy
             && currentState != EnemyState.stagger)
             {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                ChangeAnim(temp - transform.position);
                 myRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
                 animator.SetBool("Moving", true);
             } else {
                 animator.SetBool("Moving", false);
+            }
+        }
+    }
+    private void SetAnimFloat(Vector2 setVector)
+    {
+        animator.SetFloat("MoveX", setVector.x);
+        animator.SetFloat("MoveY", setVector.y);
+    }
+    private void ChangeAnim(Vector2 direction)
+    {
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            if (direction.x > 0)
+            {
+                SetAnimFloat(Vector2.right);
+            }
+            else if (direction.x < 0)
+            {
+                SetAnimFloat(Vector2.left);
+            }
+        }
+        else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
+        {
+            if (direction.y > 0)
+            {
+                SetAnimFloat(Vector2.up);
+            }
+            else if (direction.y < 0)
+            {
+                SetAnimFloat(Vector2.down);
             }
         }
     }
