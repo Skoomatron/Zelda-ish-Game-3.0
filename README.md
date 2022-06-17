@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="./demo.png" alt="Logo" width="80vw">
+    <img src="./demo.png" alt="Logo" background="cover">
   </a>
   <h3 align="center">Trevor Makes A Zelda Game</h3>
   <p align="center">
