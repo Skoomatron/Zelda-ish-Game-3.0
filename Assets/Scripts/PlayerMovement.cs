@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(AttackCo());
         }
-        else if (currentState == PlayerState.walk)
+        else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
         }
