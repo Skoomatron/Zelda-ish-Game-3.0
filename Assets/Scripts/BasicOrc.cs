@@ -34,6 +34,9 @@ public class BasicOrc : Enemy
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
                 myRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
+                animator.SetBool("Moving", true);
+            } else {
+                animator.SetBool("Moving", false);
             }
         }
     }
