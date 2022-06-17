@@ -311,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 5
   knockTime: 0.2
+  damage: 1
 --- !u!1 &426124752
 GameObject:
   m_ObjectHideFlags: 0
@@ -10157,7 +10158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   maxHealth: {fileID: 11400000, guid: db06ec98e425c46378eed691f0fe1679, type: 2}
-  health: 5
+  health: 0
   enemyName: Orc Grunt
   baseAttack: 1
   moveSpeed: 1.5
@@ -10206,6 +10207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 0
 --- !u!1 &585827706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5948162110781330763, guid: c3288468f15c7410583dde7a6f2a417f, type: 3}
@@ -19631,6 +19633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 0
 --- !u!1 &629571389
 GameObject:
   m_ObjectHideFlags: 0
@@ -20034,6 +20037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 5
   knockTime: 0.2
+  damage: 1
 --- !u!1 &976977505
 GameObject:
   m_ObjectHideFlags: 0
@@ -20111,6 +20115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 5
   knockTime: 0.2
+  damage: 1
 --- !u!1 &1344399006
 GameObject:
   m_ObjectHideFlags: 0
@@ -23760,6 +23765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 5
   knockTime: 0.2
+  damage: 1
 --- !u!1 &2031252194
 GameObject:
   m_ObjectHideFlags: 0

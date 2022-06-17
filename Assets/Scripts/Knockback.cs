@@ -22,7 +22,7 @@ public class Knockback : MonoBehaviour
                 Vector2 differential = hit.transform.position - transform.position;
                 differential = differential.normalized * thrust;
                 hit.AddForce(differential, ForceMode2D.Impulse);
-                if (collision.gameObject.CompareTag("Enemies"))
+                if (collision.gameObject.CompareTag("Enemies") && collision.IsTrigger)
                 {
                     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
                     collision.GetComponent<Enemy>().Knock(hit, knockTime, damage);
