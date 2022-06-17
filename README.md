@@ -16,6 +16,8 @@
 
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
+<a href="https://trail-xylophone-046.notion.site/Progress-2-0-Starting-Over-8834d79e2b1d45f4b259cb7644dec58b">Check Out My Project Notion!</a>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
