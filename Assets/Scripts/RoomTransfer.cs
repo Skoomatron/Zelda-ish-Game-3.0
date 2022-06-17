@@ -13,17 +13,10 @@ public class RoomTransfer : MonoBehaviour
     public GameObject text;
     public Text placeText;
 
-
     void Start()
     {
         cam = Camera.main.GetComponent<CameraMovement>();
     }
-
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -37,7 +30,6 @@ public class RoomTransfer : MonoBehaviour
             }
         }
     }
-
     private IEnumerator placeNameCo()
     {
         text.SetActive(true);
