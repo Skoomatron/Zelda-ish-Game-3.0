@@ -9,10 +9,6 @@ public class Sign : MonoBehaviour
     public Text dialogText;
     public string dialog;
     public bool playerInRange;
-    void Start()
-    {
-
-    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
@@ -26,7 +22,6 @@ public class Sign : MonoBehaviour
             }
         }
     }
-
     private void OnTriggerEnter2D (Collider2D collision)
     {
         if (collision.CompareTag("Player"))
