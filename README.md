@@ -35,7 +35,7 @@
 ![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)
 
 <a href="https://finalbossblues.itch.io/">Final Boss Blues On Itch.io</a>
+<br/>
 <a href="https://opengameart.org/content/zelda-like-tilesets-and-sprites">ArMM1998 On OpenGameArt.Org</a>
 
 
-https://finalbossblues.itch.io/
