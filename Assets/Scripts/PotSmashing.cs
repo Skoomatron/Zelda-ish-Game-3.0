@@ -9,17 +9,11 @@ public class PotSmashing : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    void Update()
-    {
-
-    }
-
     public void Smash()
     {
         anim.SetBool("Smashed", true);
         StartCoroutine(breakCo());
     }
-
     IEnumerator breakCo()
     {
         yield return new WaitForSeconds(.2f);
