@@ -36,7 +36,9 @@ public class BasicOrc : Enemy
                 myRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
                 animator.SetBool("Moving", true);
-            } else {
+            }
+            else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
+            {
                 animator.SetBool("Moving", false);
             }
         }
