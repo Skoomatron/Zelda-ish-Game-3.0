@@ -10,4 +10,12 @@ public class SignalListener : MonoBehaviour
     {
         signalEvent.Invoke();
     }
+    private void OnEnable()
+    {
+        signal.RegisterListener(this);
+    }
+    private void OnDisable()
+    {
+        signal.DeregisterListener(this);
+    }
 }
