@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEnging.Events;
+using UnityEngine.Events;
 public class SignalListener : MonoBehaviour
 {
-    public Signal signal;
+    public Signal signalSender;
     public UnityEvent signalEvent;
     public void OnSignalRaised()
     {
@@ -12,10 +12,10 @@ public class SignalListener : MonoBehaviour
     }
     private void OnEnable()
     {
-        signal.RegisterListener(this);
+        signalSender.RegisterListener(this);
     }
     private void OnDisable()
     {
-        signal.DeregisterListener(this);
+        signalSender.DeregisterListener(this);
     }
 }
