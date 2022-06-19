@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class HeartManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite halfHeart;
+    public Sprite emptyHeart;
+    public FloatValue heartContainers;
     void Start()
     {
-        
+        initHearts();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void initHearts()
     {
-        
+        for (int i = 0; i < heartContainers.initialValue; i++)
+        {
+            hearts[i].gameObject.SetActive(true);
+            hearts[i].sprite = fullHeart;
+        }
     }
 }
