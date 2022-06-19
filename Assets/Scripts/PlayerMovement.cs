@@ -79,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         currentHealth.initialValue -= damage;
         if (currentHealth.initialValue > 0)
         {
+            playerHealthSignal.Raise();
             StartCoroutine(KnockCo(knockTime));
         }
     }
