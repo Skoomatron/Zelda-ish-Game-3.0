@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+    public FloatValue currentHealth;
 
     void Start()
     {
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         );
     }
 
-    public void Knock(float knockTime)
+    public void Knock(float knockTime, float damage)
     {
         StartCoroutine(KnockCo(knockTime));
     }
