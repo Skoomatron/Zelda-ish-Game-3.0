@@ -10436,7 +10436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
-  damage: 0
+  damage: 1
 --- !u!1 &585827706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5948162110781330763, guid: c3288468f15c7410583dde7a6f2a417f, type: 3}
