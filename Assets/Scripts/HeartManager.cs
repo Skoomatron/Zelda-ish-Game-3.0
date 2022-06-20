@@ -28,11 +28,11 @@ public class HeartManager : MonoBehaviour
         float tempHealth = currentPlayerHealth.initialValue / 2;
         for (int i = 0; i < heartContainers.initialValue; i++)
         {
-            if (i <= tempHealth)
+            if (i <= tempHealth - 1)
             {
                 hearts[i].sprite = fullHeart;
             }
-            else if(i > tempHealth)
+            else if(i >= tempHealth)
             {
                 hearts[i].sprite = emptyHeart;
             }

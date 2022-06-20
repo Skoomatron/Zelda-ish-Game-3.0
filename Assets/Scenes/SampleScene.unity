@@ -20592,7 +20592,7 @@ MonoBehaviour:
   halfHeart: {fileID: -99343660, guid: 6a0fab9fb10d0421692e36d05a8b0515, type: 3}
   emptyHeart: {fileID: 1298476729, guid: 6a0fab9fb10d0421692e36d05a8b0515, type: 3}
   heartContainers: {fileID: 11400000, guid: 21b69e5dbb25d4f118570243e4036402, type: 2}
-  currentPlayerHealth: {fileID: 0}
+  currentPlayerHealth: {fileID: 11400000, guid: 21c5c45d776c244be930d5333d0bb512, type: 2}
 --- !u!1 &1258126477
 GameObject:
   m_ObjectHideFlags: 0
