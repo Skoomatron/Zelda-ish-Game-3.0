@@ -20592,6 +20592,7 @@ MonoBehaviour:
   halfHeart: {fileID: -99343660, guid: 6a0fab9fb10d0421692e36d05a8b0515, type: 3}
   emptyHeart: {fileID: 1298476729, guid: 6a0fab9fb10d0421692e36d05a8b0515, type: 3}
   heartContainers: {fileID: 11400000, guid: 21b69e5dbb25d4f118570243e4036402, type: 2}
+  currentPlayerHealth: {fileID: 0}
 --- !u!1 &1258126477
 GameObject:
   m_ObjectHideFlags: 0
@@ -20685,7 +20686,19 @@ MonoBehaviour:
   signalSender: {fileID: 11400000, guid: de45e067044f24578910c266a0fb4ae1, type: 2}
   signalEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1175869942}
+        m_TargetAssemblyTypeName: HeartManager, Assembly-CSharp
+        m_MethodName: updateHearts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1344399006
 GameObject:
   m_ObjectHideFlags: 0
