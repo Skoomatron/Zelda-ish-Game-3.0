@@ -38,22 +38,3 @@ public class RoomTransfer : MonoBehaviour
         text.SetActive(false);
     }
 }
-
-
-post: KeyNotFoundException(callback)
-
-db.query(params, (error-, data-) => {
-    if (error-)
-    {
-        response.send(error)
-    }
-    else {
-        data
-    }
-})
-
-
-
-const KeyNotFoundException = async() => {
-    await double.query()
-}
