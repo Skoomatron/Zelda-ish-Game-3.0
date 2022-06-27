@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainIsland.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PlayerHouse.unity
+    guid: 622ec8e32643f42be9771fcf2af052d0
   m_configObjects: {}
