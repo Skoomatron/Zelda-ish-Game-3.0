@@ -1423,11 +1423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6920513158116376373, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.329138
+      value: -1.43
       objectReference: {fileID: 0}
     - target: {fileID: 6920513158116376373, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.472849
+      value: -14.06
       objectReference: {fileID: 0}
     - target: {fileID: 6920513158116376373, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3576,6 +3576,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 808026302708715486, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
+      propertyPath: storedPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e56fe1bc21824c24a1e91bbf17c943b, type: 2}
+    - target: {fileID: 808026302708715486, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
+      propertyPath: playerPosition.x
+      value: 14.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 808026302708715486, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
+      propertyPath: playerPosition.y
+      value: -144
+      objectReference: {fileID: 0}
     - target: {fileID: 1881503320629926050, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
       propertyPath: m_Name
       value: Scene Transition
