@@ -32,7 +32,7 @@ public class BasicChest : Interactables
     public void OpenChest()
     {
         dialogBox.SetActive(true);
-        dialogBox.text = contents.itemName;
+        dialogText.text = contents.itemName;
         playerInventory.AddItem(contents);
         playerInventory.currentItem = contents;
         raiseItem.Raise();

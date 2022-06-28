@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (currentState = PlayerState.interact)
+        if (currentState == PlayerState.interact)
         {
             return;
         }
