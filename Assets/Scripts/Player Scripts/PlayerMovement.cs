@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public FloatValue currentHealth;
     public SignalClass playerHealthSignal;
     public VectorValue startingPosition;
+    public Inventory playerInventory;
+    public SpriteRenderer receivedItem;
 
     void Start()
     {
@@ -32,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (currentState = PlayerState.interact)
+        {
+            return;
+        }
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
@@ -52,7 +58,18 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
         animator.SetBool("Attacking", false);
         yield return new WaitForSeconds(.15f);
-        currentState = PlayerState.walk;
+        if (currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
+    }
+
+    public void RaiseItem()
+    {
+        animator.SetBool("FoundItem", true);
+        currentState = PlayerState.interact;
+        receivedItem.sprite = playerInventory.currentItem.itemSprite;
+
     }
 
     void UpdateAnimationAndMove()
