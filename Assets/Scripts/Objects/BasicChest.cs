@@ -31,7 +31,9 @@ public class BasicChest : Interactables
     }
     public void OpenChest()
     {
-
+        dialogBox.SetActive(true);
+        dialogBox.text = contents.itemName;
+        playerInventory.currentItem = contents;
     }
     public void ChestOpened()
     {
