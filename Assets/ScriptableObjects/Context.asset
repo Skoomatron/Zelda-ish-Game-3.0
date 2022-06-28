@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0db7a52e51374403caf8fce6b20a0990, type: 3}
-  m_Name: ContextClueOff
+  m_Name: Context
   m_EditorClassIdentifier: 
   listeners: []
