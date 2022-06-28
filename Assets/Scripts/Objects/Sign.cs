@@ -25,6 +25,8 @@ public class Sign : Interactables
     {
         if (collision.CompareTag("Player"))
         {
+            context.Raise();
+            playerInRange = false;
             dialogBox.SetActive(false);
         }
     }

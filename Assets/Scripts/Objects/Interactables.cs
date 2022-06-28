@@ -6,13 +6,10 @@ public class Interactables : MonoBehaviour
 {
      public SignalClass context;
     public bool playerInRange;
-    // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -31,7 +28,6 @@ public class Interactables : MonoBehaviour
         {
             context.Raise();
             playerInRange = false;
-            dialogBox.SetActive(false);
         }
     }
 }
