@@ -7,6 +7,7 @@ public class PatrolOrc : BasicOrc
     public Transform[] path;
     public int currentPoint;
     public Transform destination;
+    public float roundingDistance;
     public override void CheckDistance()
     {
         if (Vector3.Distance
@@ -24,8 +25,26 @@ public class PatrolOrc : BasicOrc
             }
             else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
             {
-
+                if (Vector3.distance(transform.position, path[currentPoint].position))
+                {
+                    Vector3 temp = Vector3.MoveTowards(transform.position, path[currentPoint].position, moveSpeed * Time.deltaTime);
+                    ChangeAnim(temp - transform.position);
+                    myRigidbody.MovePosition(temp);
+                } else {
+                    ChangeDestination();
+                }
             }
+        }
+    }
+    private void ChangeDestination()
+    {
+        if (currentPoint == path.Length - 1)
+        {
+            currentPoint = 0;
+            destination = path[0];
+        } else {
+            currentPoint++;
+            destination = path[currentPoint];
         }
     }
 }
