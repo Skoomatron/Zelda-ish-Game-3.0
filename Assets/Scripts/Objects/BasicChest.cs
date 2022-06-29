@@ -38,12 +38,11 @@ public class BasicChest : Interactables
         raiseItem.Raise();
         context.Raise();
         isOpen = true;
-
+        anim.SetBool("Opened", true);
     }
     public void ChestOpened()
     {
         dialogBox.SetActive(false);
-        // playerInventory.currentItem = null;
         raiseItem.Raise();
     }
     private void OnTriggerEnter2D (Collider2D collision)
