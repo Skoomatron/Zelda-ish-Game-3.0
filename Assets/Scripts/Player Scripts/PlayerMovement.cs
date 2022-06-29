@@ -66,9 +66,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void RaiseItem()
     {
-        animator.SetBool("FoundItem", true);
-        currentState = PlayerState.interact;
-        receivedItem.sprite = playerInventory.currentItem.itemSprite;
+        if (currentState != PlayerState.interact)
+        {
+            animator.SetBool("FoundItem", true);
+            currentState = PlayerState.interact;
+            receivedItem.sprite = playerInventory.currentItem.itemSprite;
+        } else {
+            animator.SetBool("FoundItem", false);
+        }
 
     }
 
