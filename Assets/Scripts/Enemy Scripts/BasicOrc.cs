@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BasicOrc : Enemy
 {
-    private Rigidbody2D myRigidbody;
+    public Rigidbody2D myRigidbody;
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
@@ -16,12 +16,13 @@ public class BasicOrc : Enemy
         myRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
+        animator.SetBool("Moving", true);
     }
     void FixedUpdate()
     {
         CheckDistance();
     }
-    void CheckDistance()
+    public virtual void CheckDistance()
     {
         if (Vector3.Distance
             (target.position, transform.position) <= chaseRadius
@@ -48,7 +49,7 @@ public class BasicOrc : Enemy
         animator.SetFloat("MoveX", setVector.x);
         animator.SetFloat("MoveY", setVector.y);
     }
-    private void ChangeAnim(Vector2 direction)
+    public void ChangeAnim(Vector2 direction)
     {
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
