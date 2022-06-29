@@ -73,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
             receivedItem.sprite = playerInventory.currentItem.itemSprite;
         } else {
             animator.SetBool("FoundItem", false);
+            currentState = PlayerState.idle;
+            receivedItem.itemSprite = null;
         }
 
     }
