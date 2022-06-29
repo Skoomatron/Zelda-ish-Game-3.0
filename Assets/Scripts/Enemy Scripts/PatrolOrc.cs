@@ -25,7 +25,7 @@ public class PatrolOrc : BasicOrc
             }
             else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
             {
-                if (Vector3.distance(transform.position, path[currentPoint].position))
+                if (Vector3.Distance(transform.position, path[currentPoint].position) > roundingDistance)
                 {
                     Vector3 temp = Vector3.MoveTowards(transform.position, path[currentPoint].position, moveSpeed * Time.deltaTime);
                     ChangeAnim(temp - transform.position);
