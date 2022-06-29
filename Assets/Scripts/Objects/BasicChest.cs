@@ -36,13 +36,30 @@ public class BasicChest : Interactables
         playerInventory.AddItem(contents);
         playerInventory.currentItem = contents;
         raiseItem.Raise();
-        isOpen = true;
         context.Raise();
+        isOpen = true;
+
     }
     public void ChestOpened()
     {
         dialogBox.SetActive(false);
-        playerInventory.currentItem = null;
+        // playerInventory.currentItem = null;
         raiseItem.Raise();
+    }
+    private void OnTriggerEnter2D (Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !collision.isTrigger && !isOpen)
+        {
+            context.Raise();
+            playerInRange = true;
+        }
+    }
+    private void OnTriggerExit2D (Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !collision.isTrigger && !isOpen)
+        {
+            context.Raise();
+            playerInRange = false;
+        }
     }
 }
