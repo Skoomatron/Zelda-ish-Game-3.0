@@ -38,7 +38,7 @@ public class PatrolOrc : BasicOrc
     }
     private void ChangeDestination()
     {
-        if (destination == path.Length - 1)
+        if (currentPoint == path.Length - 1)
         {
             currentPoint = 0;
             destination = path[0];
