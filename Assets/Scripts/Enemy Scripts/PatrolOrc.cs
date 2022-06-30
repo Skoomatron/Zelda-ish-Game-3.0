@@ -10,21 +10,24 @@ public class PatrolOrc : BasicOrc
     public float roundingDistance;
     public override void CheckDistance()
     {
-        if (Vector3.Distance
-            (target.position, transform.position) <= chaseRadius
+        if (Vector3.Distance(target.position, transform.position) <= chaseRadius
             && Vector3.Distance(target.position, transform.position) > attackRadius
         )
         {
             if (currentState == EnemyState.idle || currentState == EnemyState.walk
             && currentState != EnemyState.stagger)
             {
+                Debug.Log("Poop");
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
                 ChangeAnim(temp - transform.position);
                 myRigidbody.MovePosition(temp);
                 animator.SetBool("Moving", true);
             }
-            else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
+        } else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
             {
+                Debug.Log("Transform: " );
+                // Debug.Log("Target: " + target.position);
+                // Debug.Log("Chase: " + chaseRadius);
                 if (Vector3.Distance(transform.position, path[currentPoint].position) > roundingDistance)
                 {
                     Vector3 temp = Vector3.MoveTowards(transform.position, path[currentPoint].position, moveSpeed * Time.deltaTime);
@@ -34,7 +37,6 @@ public class PatrolOrc : BasicOrc
                     ChangeDestination();
                 }
             }
-        }
     }
     private void ChangeDestination()
     {

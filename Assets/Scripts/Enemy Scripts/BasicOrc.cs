@@ -74,7 +74,6 @@ public class BasicOrc : Enemy
             }
         }
     }
-
     private void ChangeState(EnemyState newState)
     {
         if (currentState != newState)
