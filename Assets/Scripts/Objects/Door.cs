@@ -13,4 +13,13 @@ public class Door : Interactables
     [Header("Door Variables")]
     public DoorType thisDoorType;
     public bool open = false;
+
+    void Start()
+    {
+
+    }
+    void Update()
+    {
+
+    }
 }
