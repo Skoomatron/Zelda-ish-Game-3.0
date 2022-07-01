@@ -17,7 +17,6 @@ public class PatrolOrc : BasicOrc
             if (currentState == EnemyState.idle || currentState == EnemyState.walk
             && currentState != EnemyState.stagger)
             {
-                Debug.Log("Poop");
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
                 ChangeAnim(temp - transform.position);
                 myRigidbody.MovePosition(temp);
@@ -25,9 +24,6 @@ public class PatrolOrc : BasicOrc
             }
         } else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
             {
-                Debug.Log("Transform: " );
-                // Debug.Log("Target: " + target.position);
-                // Debug.Log("Chase: " + chaseRadius);
                 if (Vector3.Distance(transform.position, path[currentPoint].position) > roundingDistance)
                 {
                     Vector3 temp = Vector3.MoveTowards(transform.position, path[currentPoint].position, moveSpeed * Time.deltaTime);
