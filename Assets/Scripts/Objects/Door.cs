@@ -28,9 +28,13 @@ public class Door : Interactables
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (playerInRange)
+            if (playerInRange && thisDoorType == DoorType.key)
             {
-                Open();
+                if (playerInventory.numberOfKeyItems > 0)
+                {
+                    playerInventory.numberOfKeyItems--;
+                    Open();
+                }
 
             }
         }
@@ -38,6 +42,8 @@ public class Door : Interactables
     public void Open()
     {
         anim.SetBool("ToggleSpikes", true);
+        open = true;
+        physicsCollider.enabled = false;
     }
     public void Close()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interactables : MonoBehaviour
 {
-     public SignalClass context;
+    public SignalClass context;
     public bool playerInRange;
     void Start()
     {
