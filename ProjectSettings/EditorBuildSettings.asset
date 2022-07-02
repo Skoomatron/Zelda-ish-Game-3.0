@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerHouse.unity
     guid: 622ec8e32643f42be9771fcf2af052d0
+  - enabled: 1
+    path: Assets/Scenes/OrcDungeon.unity
+    guid: f401fdb319894409a840c916f10d6e92
   m_configObjects: {}
