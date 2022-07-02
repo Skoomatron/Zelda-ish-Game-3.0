@@ -20,9 +20,7 @@ public class Door : Interactables
 
     void Start()
     {
-        anim = GetComponent<Animator>();
-        doorSprite = GetComponent<SpriteRenderer>();
-        physicsCollider = GetComponent<BoxCollider2D>();
+
     }
     void Update()
     {
