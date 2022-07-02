@@ -11,8 +11,7 @@ public class PatrolOrc : BasicOrc
     public override void CheckDistance()
     {
         if (Vector3.Distance(target.position, transform.position) <= chaseRadius
-            && Vector3.Distance(target.position, transform.position) > attackRadius
-        )
+            && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
             if (currentState == EnemyState.idle || currentState == EnemyState.walk
             && currentState != EnemyState.stagger)
