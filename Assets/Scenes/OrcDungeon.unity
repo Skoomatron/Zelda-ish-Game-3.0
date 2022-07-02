@@ -139,6 +139,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1119704506697275568, guid: 58651baa0e1404555b34789d90b5017c, type: 3}
     - target: {fileID: 808026302708715486, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
+      propertyPath: storedPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e56fe1bc21824c24a1e91bbf17c943b, type: 2}
+    - target: {fileID: 808026302708715486, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
       propertyPath: playerPosition.x
       value: -10.4
       objectReference: {fileID: 0}
