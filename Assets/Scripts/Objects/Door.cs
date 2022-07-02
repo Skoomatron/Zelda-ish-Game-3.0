@@ -13,12 +13,33 @@ public class Door : Interactables
     [Header("Door Variables")]
     public DoorType thisDoorType;
     public bool open = false;
+    public Animator anim;
+    public Inventory playerInventory;
+    public SpriteRenderer doorSprite;
+    public BoxCollider2D physicsCollider;
 
     void Start()
     {
-
+        anim = GetComponent<Animator>();
+        doorSprite = GetComponent<SpriteRenderer>();
+        physicsCollider = GetComponent<BoxCollider2D>();
     }
     void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (playerInRange)
+            {
+                Open();
+
+            }
+        }
+    }
+    public void Open()
+    {
+        anim.SetBool("ToggleSpikes", true);
+    }
+    public void Close()
     {
 
     }

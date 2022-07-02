@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927896618172561061, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6927896618172561061, guid: f53a83466d6e8446ebd5e42a44936609, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35895,7 +35895,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991233964}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d878df7f2ea1e4fd2823b68788a65fe5, type: 2}
   m_CullingMode: 0
@@ -36058,6 +36058,7 @@ GameObject:
   - component: {fileID: 1681448810}
   - component: {fileID: 1681448811}
   - component: {fileID: 1681448812}
+  - component: {fileID: 1681448813}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -36093,7 +36094,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06458664, y: 0.76427746}
+  m_Offset: {x: 0.021745682, y: 0.8071184}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -36104,7 +36105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1291733, y: 1.0645885}
+  m_Size: {x: 1.2148552, y: 1.1502705}
   m_EdgeRadius: 0
 --- !u!114 &1681448812
 MonoBehaviour:
@@ -36122,6 +36123,30 @@ MonoBehaviour:
   playerInRange: 0
   thisDoorType: 0
   open: 0
+  anim: {fileID: 1681448813}
+  playerInventory: {fileID: 11400000, guid: c23d89165a9664505aee3e1918279693, type: 2}
+  doorSprite: {fileID: 991233966}
+  physicsCollider: {fileID: 991233968}
+--- !u!95 &1681448813
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681448809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d878df7f2ea1e4fd2823b68788a65fe5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1837194700
 GameObject:
   m_ObjectHideFlags: 0
