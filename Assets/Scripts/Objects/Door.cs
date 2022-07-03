@@ -15,7 +15,6 @@ public class Door : Interactables
     public bool open = false;
     public Animator anim;
     public Inventory playerInventory;
-    public SpriteRenderer doorSprite;
     public BoxCollider2D physicsCollider;
 
     void Start()
