@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public VectorValue startingPosition;
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
+    public SignalClass playerHit;
 
     void Start()
     {
@@ -118,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator KnockCo(float knockTime)
     {
+        playerHit.Raise();
         if (myRigidbody != null)
         {
             yield return new WaitForSeconds(knockTime);

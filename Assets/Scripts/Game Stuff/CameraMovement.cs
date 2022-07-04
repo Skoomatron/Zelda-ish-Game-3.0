@@ -27,7 +27,7 @@ public class CameraMovement : MonoBehaviour
     public void BeginKick()
     {
         anim.SetBool("KickActive", true);
-        KickCo();
+        StartCoroutine(KickCo());
     }
     public IEnumerator KickCo()
     {
