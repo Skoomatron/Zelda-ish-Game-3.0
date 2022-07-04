@@ -5,7 +5,8 @@ using UnityEngine;
 public class Heart : PowerUp
 {
     public FloatValue playerHealth;
-    public FloatValue healthGained;
+    public float healthGained;
+    public FloatValue heartContainers;
     void Start()
     {
 
@@ -18,8 +19,13 @@ public class Heart : PowerUp
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
-            playerHealth.initialValue += healthGained;
+            playerHealth.runtimeValue += healthGained;
+            if (playerHealth.runtimeValue > heartContainers.runtimeValue * 2f)
+            {
+                playerHealth.runtimeValue = heartContainers.runtimeValue * 2f;
+            }
             powerUpSignal.Raise();
+            Destroy(this.gameObject);
         }
     }
 }
