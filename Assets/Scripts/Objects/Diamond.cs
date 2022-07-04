@@ -7,7 +7,7 @@ public class Diamond : PowerUp
     public Inventory playerInventory;
     void Start()
     {
-
+        powerUpSignal.Raise();
     }
 
     void Update()
