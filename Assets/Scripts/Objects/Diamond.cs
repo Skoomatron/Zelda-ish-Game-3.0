@@ -14,4 +14,13 @@ public class Diamond : PowerUp
     {
 
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !collision.isTrigger)
+        {
+            playerInventory.diamonds += 1;
+            powerUpSignal.Raise();
+            Destroy(this.gameObject);
+        }
+    }
 }
