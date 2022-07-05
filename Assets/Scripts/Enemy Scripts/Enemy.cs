@@ -11,12 +11,16 @@ public enum EnemyState
 }
 public class Enemy : MonoBehaviour
 {
+    [Header("State Machine")]
     public EnemyState currentState;
+    [Header("Enemy Health Variables")]
     public FloatValue maxHealth;
     public float health;
+    [Header("Enemy Stat Variables")]
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    [Header("Enemy Death Effect")]
     public GameObject deathEffect;
 
     private void Awake()

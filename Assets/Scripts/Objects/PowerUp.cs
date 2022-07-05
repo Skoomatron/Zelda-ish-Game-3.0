@@ -5,12 +5,4 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     public SignalClass powerUpSignal;
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-
-    }
 }
