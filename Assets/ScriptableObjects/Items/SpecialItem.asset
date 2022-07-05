@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d07ea60cf604d45bfc2fd2466bd037, type: 3}
   m_Name: SpecialItem
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 967770754, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
-  itemName: It's something FANTASTIC!!!
+  itemSprite: {fileID: -52313766, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
+  itemName: A hammer?  What could this be for?
   keyItem: 1

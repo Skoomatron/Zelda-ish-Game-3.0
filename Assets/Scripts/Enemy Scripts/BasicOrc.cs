@@ -4,9 +4,11 @@ using UnityEngine;
 public class BasicOrc : Enemy
 {
     public Rigidbody2D myRigidbody;
+    [Header("Target Varaiables")]
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
+    [Header("Animation Settings")]
     public Transform homePosition;
     public Animator animator;
 
@@ -74,7 +76,7 @@ public class BasicOrc : Enemy
             }
         }
     }
-    private void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         if (currentState != newState)
         {
