@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class HeartManager : MonoBehaviour
 {
+    [Header("Heart Art")]
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite halfHeart;
     public Sprite emptyHeart;
+    [Header("Heart Parameters")]
     public FloatValue heartContainers;
     public FloatValue currentPlayerHealth;
     void Start()

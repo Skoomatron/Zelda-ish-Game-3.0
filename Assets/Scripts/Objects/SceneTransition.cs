@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
+    [Header("Scene Transition Mechanics")]
     public string sceneToLoad;
     public Vector2 playerPosition;
     public VectorValue storedPosition;
+    [Header("Scene Animations")]
     public GameObject fadeIn;
     public GameObject fadeOut;
     public float fadeWait;
