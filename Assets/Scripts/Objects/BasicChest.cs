@@ -21,6 +21,10 @@ public class BasicChest : Interactables
     {
         anim = GetComponent<Animator>();
         isOpen = storedOpen.runtimeValue;
+        if (isOpen)
+        {
+            anim.SetBool("Opened", true);
+        }
     }
 
     void Update()
@@ -45,7 +49,7 @@ public class BasicChest : Interactables
         context.Raise();
         isOpen = true;
         anim.SetBool("Opened", true);
-        storedOpen.runtimeValue = true;
+        storedOpen.runtimeValue = isOpen;
     }
     public void ChestOpened()
     {
