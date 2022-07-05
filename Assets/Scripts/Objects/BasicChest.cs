@@ -5,19 +5,22 @@ using UnityEngine.UI;
 
 public class BasicChest : Interactables
 {
-    [Header("Chest Item Variables")]
+    [Header("Chest Contents")]
     public Item contents;
     public Inventory playerInventory;
     [Header("Chest Mechanics")]
     public bool isOpen;
+    public BoolValue storedOpen;
     public SignalClass raiseItem;
-    private Animator anim;
     [Header("Chest Text")]
     public GameObject dialogBox;
     public Text dialogText;
+    [Header("Chest Animation")]
+    private Animator anim;
     void Start()
     {
         anim = GetComponent<Animator>();
+        isOpen = storedOpen.runtimeValue;
     }
 
     void Update()
@@ -42,6 +45,7 @@ public class BasicChest : Interactables
         context.Raise();
         isOpen = true;
         anim.SetBool("Opened", true);
+        storedOpen.runtimeValue = true;
     }
     public void ChestOpened()
     {
