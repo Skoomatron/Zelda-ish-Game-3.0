@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class BasicChest : Interactables
 {
+    [Header("Chest Item Variables")]
     public Item contents;
     public Inventory playerInventory;
+    [Header("Chest Mechanics")]
     public bool isOpen;
     public SignalClass raiseItem;
+    private Animator anim;
+    [Header("Chest Text")]
     public GameObject dialogBox;
     public Text dialogText;
-    private Animator anim;
     void Start()
     {
         anim = GetComponent<Animator>();

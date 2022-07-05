@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class RoomTransfer : MonoBehaviour
 {
+    [Header("Camera Variables")]
     public Vector2 cameraChange;
     public Vector3 playerChange;
     private CameraMovement cam;
+    [Header("Area Text Variables")]
     public bool needText;
     public string placeName;
     public GameObject text;

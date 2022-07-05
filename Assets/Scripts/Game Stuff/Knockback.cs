@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Knockback : MonoBehaviour
 {
+    [Header("Knockback Parameters")]
     public float thrust;
     public float knockTime;
+    [Header("Damage Variable")]
     public float damage;
     private void OnTriggerEnter2D(Collider2D collision)
     {

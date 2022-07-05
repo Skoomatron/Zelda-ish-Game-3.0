@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PatrolOrc : BasicOrc
 {
+    [Header("Patrol Path Variables")]
     public Transform[] path;
     public int currentPoint;
     public Transform destination;
