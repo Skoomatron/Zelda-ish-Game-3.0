@@ -6,19 +6,19 @@ public class Switch : MonoBehaviour
 {
     public bool active;
     public BoolValue storedValue;
-    public Sprite activeSprite;
-    private SpriteRenderer thisSprite;
+    // public Sprite activeSprite;
+    // private SpriteRenderer thisSprite;
     public Door thisDoor;
     public Animator anim;
     void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        // sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         active = storedValue.runtimeValue;
     }
     public void ActivateSwitch()
     {
-        anim.SetActive("Toggle", true);
+        anim.SetBool("Toggle", true);
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
