@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     [Header("Projectile Duration")]
     public float lifetime;
     private float decayTime;
-    private Rigidbody2D myRigidBody;
+    public Rigidbody2D myRigidBody;
     void Start()
     {
         decayTime = lifetime;
