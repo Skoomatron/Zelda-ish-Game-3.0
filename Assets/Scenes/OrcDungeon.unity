@@ -323,6 +323,8 @@ GameObject:
   - component: {fileID: 488252013}
   - component: {fileID: 488252012}
   - component: {fileID: 488252011}
+  - component: {fileID: 488252017}
+  - component: {fileID: 488252016}
   m_Layer: 0
   m_Name: BlueProjectile
   m_TagString: Untagged
@@ -464,6 +466,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &488252016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488252010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 1
+  knockTime: 1
+  damage: 1
+--- !u!114 &488252017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488252010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a15a1c21a06457a838a3531bbdfc68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 2
+  directionToMove: {x: 0, y: 0}
+  lifetime: 3
 --- !u!1 &684323571
 GameObject:
   m_ObjectHideFlags: 0
