@@ -58405,6 +58405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6881414925711739026, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
+      propertyPath: playerHit
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a3bbaaed1383428a81d50ec2e8e06eb, type: 2}
     - target: {fileID: 6881414925711739027, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -58651,7 +58655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 2
+  thrust: 1
   knockTime: 0.2
   damage: 1
 --- !u!114 &3096748077913422720
@@ -58677,10 +58681,12 @@ MonoBehaviour:
   myRigidbody: {fileID: 0}
   target: {fileID: 1956183059}
   chaseRadius: 6
-  attackRadius: 1
+  attackRadius: 0
   homePosition: {fileID: 0}
   animator: {fileID: 3096748077913422708}
   projectile: {fileID: 4714870763005050126, guid: 62a911c8bdcbe476191e749f7f1ed896, type: 3}
+  fireDelay: 0.5
+  canFire: 1
 --- !u!1001 &3110804034236654843
 PrefabInstance:
   m_ObjectHideFlags: 0
