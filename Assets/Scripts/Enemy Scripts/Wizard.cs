@@ -8,7 +8,7 @@ public class Wizard : BasicOrc
     public float fireDelay;
     private float fireDelaySeconds;
     public bool canFire = true;
-    private void update()
+    private void Update()
     {
         fireDelaySeconds -= Time.deltaTime;
         if (fireDelaySeconds <= 0)
