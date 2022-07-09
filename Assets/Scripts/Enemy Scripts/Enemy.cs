@@ -23,9 +23,11 @@ public class Enemy : MonoBehaviour
     [Header("Enemy Death Effect")]
     public GameObject deathEffect;
     public float deathDelay = 1;
+    public Vector2 homePosition;
 
     private void Awake()
     {
+        transform.position = homePosition;
         health = maxHealth.initialValue;
     }
     private void TakeDamage(float damage)
