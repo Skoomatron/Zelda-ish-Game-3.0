@@ -15,6 +15,10 @@ public class Room : MonoBehaviour
             {
                 ChangeActivation(enemies[x], true);
             }
+            for (int x = 0; x < pots.Length; x++)
+            {
+                ChangeActivation(pots[x], true);
+            }
         }
     }
 
@@ -22,7 +26,14 @@ public class Room : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
-
+            for (int x = 0; x < enemies.Length; x++)
+            {
+                ChangeActivation(enemies[x], false);
+            }
+            for (int x = 0; x < pots.Length; x++)
+            {
+                ChangeActivation(pots[x], false);
+            }
         }
     }
 
