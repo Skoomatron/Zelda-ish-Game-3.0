@@ -9,7 +9,6 @@ public class BasicOrc : Enemy
     public float chaseRadius;
     public float attackRadius;
     [Header("Animation Settings")]
-    public Transform homePosition;
     public Animator animator;
 
     void Start()

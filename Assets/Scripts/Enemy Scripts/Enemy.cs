@@ -27,8 +27,12 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = homePosition;
         health = maxHealth.initialValue;
+    }
+    private void OnEnable()
+    {
+        transform.position = homePosition;
+
     }
     private void TakeDamage(float damage)
     {
