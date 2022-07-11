@@ -306,7 +306,19 @@ MonoBehaviour:
   signalSender: {fileID: 11400000, guid: df9e28e215bd247b58150549607c6cea, type: 2}
   signalEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 341733840}
+        m_TargetAssemblyTypeName: EnemyRoom, Assembly-CSharp
+        m_MethodName: CheckEnemies
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &345619354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361,6 +373,14 @@ PrefabInstance:
     - target: {fileID: 3403969839116071372, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403969839116071375, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
+      propertyPath: homePosition.x
+      value: -11.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403969839116071375, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
+      propertyPath: homePosition.y
+      value: -32.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
@@ -36170,7 +36190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3403969839116071372, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3432312
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 3403969839116071372, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36207,6 +36227,18 @@ PrefabInstance:
     - target: {fileID: 3403969839116071372, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403969839116071375, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
+      propertyPath: roomSignal
+      value: 
+      objectReference: {fileID: 11400000, guid: df9e28e215bd247b58150549607c6cea, type: 2}
+    - target: {fileID: 3403969839116071375, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
+      propertyPath: homePosition.x
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403969839116071375, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
+      propertyPath: homePosition.y
+      value: -29.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
