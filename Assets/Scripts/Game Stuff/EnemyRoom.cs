@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyRoom : DungeonRoom
 {
     public Door[] doors;
-    public SignalListener enemyUpdate;
     public void CheckEnemies()
     {
         for (int i = 0; i < enemies.Length; i++)
