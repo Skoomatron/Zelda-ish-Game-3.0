@@ -13,8 +13,8 @@ public class EnemyRoom : DungeonRoom
             {
                 return;
             }
+            OpenDoors();
         }
-        OpenDoors();
     }
     public void CloseDoors()
     {
