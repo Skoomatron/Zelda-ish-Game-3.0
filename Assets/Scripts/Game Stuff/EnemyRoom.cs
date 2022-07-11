@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class EnemyRoom : DungeonRoom
 {
-    // Start is called before the first frame update
+    public Door[] doors;
+    public SignalListener enemyUpdate;
     void Start()
     {
 
     }
-
-    // Update is called once per frame
-    void Update()
+    public void CheckEnemies()
     {
-
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if(enemies[i].gameObject.activeInHierarchy)
+            {
+                return;
+            }
+        }
+        OpenDoors();
+    }
+    public void CloseDoors()
+    {
+        for (int i = 0; i < doors.Length; i++)
+        {
+            doors[i].Close();
+        }
+    }
+    public void OpenDoors()
+    {
+        for (int i = 0; i < doors.Length; i++)
+        {
+            doors[i].Open();
+        }
     }
 }
