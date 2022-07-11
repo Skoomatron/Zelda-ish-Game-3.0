@@ -9,7 +9,7 @@ public class EnemyRoom : DungeonRoom
     {
         for (int i = 0; i < enemies.Length; i++)
         {
-            if(enemies[i].gameObject.activeInHierarchy)
+            if(enemies[i].gameObject.activeInHierarchy && i < enemies.Length - 1)
             {
                 return;
             }

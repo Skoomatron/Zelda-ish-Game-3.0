@@ -44,6 +44,8 @@ public class Door : Interactables
     }
     public void Close()
     {
-
+        anim.SetBool("ToggleSpikes", false);
+        open = false;
+        physicsCollider.enabled = true;
     }
 }
