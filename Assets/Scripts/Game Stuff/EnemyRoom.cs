@@ -6,10 +6,6 @@ public class EnemyRoom : DungeonRoom
 {
     public Door[] doors;
     public SignalListener enemyUpdate;
-    void Start()
-    {
-
-    }
     public void CheckEnemies()
     {
         for (int i = 0; i < enemies.Length; i++)
@@ -35,4 +31,13 @@ public class EnemyRoom : DungeonRoom
             doors[i].Open();
         }
     }
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+        CloseDoors();
+    }
+    // public override void OnTriggerExit2D(Collider2D collision)
+    // {
+    //     base.OnTriggerExit2D(collision);
+    // }
 }
