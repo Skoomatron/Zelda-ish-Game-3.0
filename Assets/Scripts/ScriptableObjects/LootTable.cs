@@ -13,4 +13,19 @@ public class Loot
 public class LootTable : ScriptableObject
 {
     public Loot[] loots;
+
+    public PowerUp LootPowerup()
+    {
+        float cumProb = 0;
+        float currentProb = Random.Range(0, 100);
+        for (int i = 0; i < loots.Length; i++)
+        {
+            cumProb =+ loots[i].lootChance;
+            if (currentProb <= cumProb)
+            {
+                return loots[i].thisLoot;
+            }
+        }
+        return null;
+    }
 }

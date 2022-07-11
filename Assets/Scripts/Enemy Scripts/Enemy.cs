@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     [Header("Enemy Death Effect")]
     public GameObject deathEffect;
     public float deathDelay = 1;
+    public LootTable thisLoot;
     public Vector2 homePosition;
     [Header("Death Signal")]
     public SignalClass roomSignal;
@@ -42,11 +43,23 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             OnDeath();
+            MakeLoot();
             roomSignal.Raise();
             this.gameObject.SetActive(false);
         }
     }
 
+    private void MakeLoot()
+    {
+        if (thisLoot != null)
+        {
+            PowerUp current = thisLoot.LootPowerup();
+            if (current != null)
+            {
+                Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            }
+        }
+    }
     private void OnDeath()
     {
         if (deathEffect != null)
