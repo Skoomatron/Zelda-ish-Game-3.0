@@ -4,27 +4,19 @@ using UnityEngine;
 
 public class MeleeEnemy : BasicOrc
 {
-    // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
 
     }
-
     public override void CheckDistance()
     {
-        if (Vector3.Distance
-            (target.position, transform.position) <= chaseRadius
-            && Vector3.Distance(target.position, transform.position) > attackRadius
-        )
+        if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
-            if (currentState == EnemyState.idle || currentState == EnemyState.walk
-            && currentState != EnemyState.stagger)
+            if (currentState == EnemyState.idle || currentState == EnemyState.walk && currentState != EnemyState.stagger)
             {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
                 ChangeAnim(temp - transform.position);
@@ -32,17 +24,19 @@ public class MeleeEnemy : BasicOrc
                 ChangeState(EnemyState.walk);
                 animator.SetBool("Moving", true);
             }
-        } else if (Vector3.Distance(target.position, transform.position) <= chaseRadius
-                && Vector3.Distance(target.position, transform.position) <= attackRadius)
+        } else if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) <= attackRadius)
                 {
-                    StartCoroutine(AttackCo());
+                    if (currentState == EnemyState.idle || currentState == EnemyState.walk && currentState != EnemyState.stagger)
+                    {
+                        StartCoroutine(AttackCo());
+                    }
                 }
     }
     public IEnumerator AttackCo()
     {
         currentState = EnemyState.attack;
         animator.SetBool("Attacking", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         currentState = EnemyState.walk;
         animator.SetBool("Attacking", false);
     }
