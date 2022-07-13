@@ -36080,6 +36080,7 @@ GameObject:
   - component: {fileID: 1629429184}
   - component: {fileID: 1629429183}
   - component: {fileID: 1629429182}
+  - component: {fileID: 1629429188}
   m_Layer: 6
   m_Name: MeleeOgre
   m_TagString: Untagged
@@ -36124,7 +36125,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -36150,7 +36151,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -36247,6 +36248,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629429188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629429181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58371e45a9901443383e234f11f674e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  maxHealth: {fileID: 11400000, guid: db06ec98e425c46378eed691f0fe1679, type: 2}
+  health: 0
+  enemyName: 
+  baseAttack: 1
+  moveSpeed: 2
+  deathEffect: {fileID: 0}
+  deathDelay: 1
+  thisLoot: {fileID: 11400000, guid: 58fc6242f7dc149c5ba8bb886a2040de, type: 2}
+  homePosition: {x: 0, y: -20}
+  roomSignal: {fileID: 11400000, guid: 6a3bbaaed1383428a81d50ec2e8e06eb, type: 2}
+  myRigidbody: {fileID: 1629429185}
+  target: {fileID: 1956183059}
+  chaseRadius: 4
+  attackRadius: 1.5
+  animator: {fileID: 1629429182}
 --- !u!1001 &1720470019
 PrefabInstance:
   m_ObjectHideFlags: 0
