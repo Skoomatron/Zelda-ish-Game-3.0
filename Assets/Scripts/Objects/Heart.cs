@@ -7,14 +7,6 @@ public class Heart : PowerUp
     public FloatValue playerHealth;
     public float healthGained;
     public FloatValue heartContainers;
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-
-    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)

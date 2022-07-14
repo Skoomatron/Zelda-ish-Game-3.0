@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
     public SignalClass playerHit;
+    public SignalClass reduceMagic;
     public GameObject projectile;
 
     void Start()
@@ -83,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void MakeArrow()
     {
+
         Vector2 temp = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
         ArrowProjectile arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<ArrowProjectile>();
         arrow.Setup(temp, ArrowDirection());

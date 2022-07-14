@@ -8,6 +8,8 @@ public class Inventory : ScriptableObject
     public List<Item> items = new List<Item>();
     public int numberOfKeyItems;
     public int diamonds;
+    public float currentMagic;
+    public float maxMagic = 10;
     public void AddItem(Item itemToAdd)
     {
         if (itemToAdd.keyItem)
