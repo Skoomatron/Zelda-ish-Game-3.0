@@ -85,7 +85,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 temp = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
         ArrowProjectile arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<ArrowProjectile>();
-        arrow.Setup(temp, Vector3.zero);
+        arrow.Setup(temp, ArrowDirection());
+    }
+    Vector3 ArrowDirection()
+    {
+        float temp = Mathf.Atan2(animator.GetFloat("MoveY"), animator.GetFloat("MoveX")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, temp);
     }
 
     public void RaiseItem()
