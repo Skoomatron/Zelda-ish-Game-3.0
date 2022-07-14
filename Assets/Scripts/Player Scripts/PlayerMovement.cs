@@ -84,10 +84,13 @@ public class PlayerMovement : MonoBehaviour
     }
     private void MakeArrow()
     {
-
-        Vector2 temp = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
-        ArrowProjectile arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<ArrowProjectile>();
-        arrow.Setup(temp, ArrowDirection());
+        if (playerInventory.currentMagic > 0)
+        {
+            Vector2 temp = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
+            ArrowProjectile arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<ArrowProjectile>();
+            arrow.Setup(temp, ArrowDirection());
+            reduceMagic.Raise();
+        }
     }
     Vector3 ArrowDirection()
     {

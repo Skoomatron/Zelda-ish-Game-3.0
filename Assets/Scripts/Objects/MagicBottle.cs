@@ -13,6 +13,7 @@ public class MagicBottle : PowerUp
         if(collision.gameObject.CompareTag("Player"))
         {
             powerUpSignal.Raise();
+            Destroy(this.gameObject);
         }
     }
 }
