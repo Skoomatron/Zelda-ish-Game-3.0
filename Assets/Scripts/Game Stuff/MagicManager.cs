@@ -15,8 +15,7 @@ public class MagicManager : MonoBehaviour
     }
     public void AddMagic()
     {
-        magicSlider.value++;
-        playerInventory.currentMagic++;
+        magicSlider.value = playerInventory.currentMagic;
         if (magicSlider.value > magicSlider.maxValue)
         {
             magicSlider.value = magicSlider.maxValue;
@@ -25,8 +24,7 @@ public class MagicManager : MonoBehaviour
     }
     public void DecreaseMagic()
     {
-        magicSlider.value--;
-        playerInventory.currentMagic--;
+        magicSlider.value = playerInventory.currentMagic;
         if (magicSlider.value < 0)
         {
             magicSlider.value = 0;

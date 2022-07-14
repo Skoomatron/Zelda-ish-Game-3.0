@@ -36283,6 +36283,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3403969839116071375, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
+      propertyPath: thisLoot
+      value: 
+      objectReference: {fileID: 11400000, guid: 58fc6242f7dc149c5ba8bb886a2040de, type: 2}
+    - target: {fileID: 3403969839116071375, guid: e3d0354fe951346d082e0556a68d1f22, type: 3}
       propertyPath: homeCords.x
       value: 13
       objectReference: {fileID: 0}
@@ -59926,6 +59930,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1956183059}
+    - target: {fileID: 877690799877158817, guid: 2a3d0049cf21645beb6165c5def5a9f5, type: 3}
+      propertyPath: thisLoot
+      value: 
+      objectReference: {fileID: 11400000, guid: 17f6740846fea43629d4dde126b45067, type: 2}
     - target: {fileID: 877690799877158817, guid: 2a3d0049cf21645beb6165c5def5a9f5, type: 3}
       propertyPath: homeCords.x
       value: 0.5

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MagicBottle : PowerUp
 {
+    public Inventory playerInventory;
+    public float magicValue;
     void Start()
     {
 
@@ -12,6 +14,7 @@ public class MagicBottle : PowerUp
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            playerInventory.currentMagic += magicValue;
             powerUpSignal.Raise();
             Destroy(this.gameObject);
         }
