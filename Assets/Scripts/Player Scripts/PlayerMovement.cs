@@ -48,11 +48,15 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(AttackCo());
         }
+        else if (Input.GetButtonDown("secondWeapon") && currentState != PlayerState.attack
+        && currentState != PlayerState.stagger)
+        {
+            StartCoroutine(SecondAttackCo());
+        }
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
         }
-        else if (Input.GetButtonDown("arrow"))
     }
     private IEnumerator AttackCo()
     {
@@ -65,6 +69,23 @@ public class PlayerMovement : MonoBehaviour
         {
             currentState = PlayerState.walk;
         }
+    }
+    private IEnumerator SecondAttackCo()
+    {
+        currentState = PlayerState.attack;
+        yield return null;
+        MakeArrow();
+        yield return new WaitForSeconds(.15f);
+        if (currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
+    }
+    private void MakeArrow()
+    {
+        Vector2 temp = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
+        ArrowProjectile arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<ArrowProjectile>();
+        arrow.Setup(temp, Vector3.zero);
     }
 
     public void RaiseItem()
