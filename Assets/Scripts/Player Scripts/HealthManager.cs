@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
@@ -9,27 +10,25 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         healthSlider.maxValue = playerHealth.initialValue;
-        healthSlider.value = playerHealth.initialValue;
-        playerHealth.currentHealth = playerHealth.initialValue;
+        healthSlider.value = playerHealth.runtimeValue;
     }
     public void AddHealth()
     {
         healthSlider.value++;
-        playerHealth.currentHealth++;
+        playerHealth.runtimeValue++;
         if (healthSlider.value > healthSlider.maxValue)
         {
             healthSlider.value = healthSlider.maxValue;
-            playerHealth.currentHealth = playerHealth.initialValue;
+            playerHealth.runtimeValue = playerHealth.initialValue;
         }
     }
     public void DecreaseHealth(int damage)
     {
-        healthSlider.value -= damage;
-        playerHealth.currentHealth -= damage;
+        healthSlider.value = playerHealth.runtimeValue;
         if (healthSlider.value < 0)
         {
             healthSlider.value = 0;
-            playerHealth.currentHealth = 0;
+            playerHealth.runtimeValue = 0;
         }
     }
 }
