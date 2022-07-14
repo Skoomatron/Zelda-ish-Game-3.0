@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
     public SignalClass playerHit;
+    public GameObject projectile;
 
     void Start()
     {
@@ -51,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         {
             UpdateAnimationAndMove();
         }
+        else if (Input.GetButtonDown("arrow"))
     }
     private IEnumerator AttackCo()
     {
