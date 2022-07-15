@@ -12,16 +12,21 @@ public enum PlayerState {
 
 public class PlayerMovement : MonoBehaviour
 {
-    public PlayerState currentState;
-    public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+    public PlayerState currentState;
+    [Header("Health Variables")]
     public FloatValue currentHealth;
     public SignalClass playerHealthSignal;
+    [Header("Position and Movement")]
+    public float speed;
     public VectorValue startingPosition;
+    [Header("Inventory")]
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
+    [Header("Attacking and Magic")]
+    public Item bow;
     public SignalClass playerHit;
     public SignalClass reduceMagic;
     public GameObject projectile;
@@ -52,7 +57,10 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetButtonDown("secondWeapon") && currentState != PlayerState.attack
         && currentState != PlayerState.stagger)
         {
-            StartCoroutine(SecondAttackCo());
+            if (playerInventory.ItemCheck(bow))
+            {
+                StartCoroutine(SecondAttackCo());
+            }
         }
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
