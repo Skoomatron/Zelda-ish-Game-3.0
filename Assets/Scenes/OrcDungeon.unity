@@ -814,7 +814,9 @@ GameObject:
   - component: {fileID: 602068030}
   - component: {fileID: 602068029}
   - component: {fileID: 602068028}
-  m_Layer: 9
+  - component: {fileID: 602068032}
+  - component: {fileID: 602068033}
+  m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,9 +850,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0662e2b2e7fd94ff4a0cda944a97ad6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 0}
+  context: {fileID: 11400000, guid: 3e5a7c30a2a724710aa3f2ced6e867fd, type: 2}
   playerInRange: 0
-  speed: 2
+  bounds: {fileID: 1587558273}
+  speed: 3
 --- !u!50 &602068029
 Rigidbody2D:
   serializedVersion: 4
@@ -944,6 +947,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &602068032
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602068026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.014569581, y: -0.91788864}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.625, y: 2.25}
+    newSize: {x: 0.26, y: 0.36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8965167, y: 0.41422272}
+  m_EdgeRadius: 0
+--- !u!58 &602068033
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602068026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.125
 --- !u!1 &684323571
 GameObject:
   m_ObjectHideFlags: 0
@@ -37254,7 +37299,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

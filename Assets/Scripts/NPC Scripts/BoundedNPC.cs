@@ -8,17 +8,21 @@ public class BoundedNPC : Interactables
     private Transform myTransform;
     private Rigidbody2D myRigidbody;
     private Animator animator;
+    public Collider2D bounds;
     public float speed;
     void Start()
     {
-        animator = GetComponent<animator>();
+        animator = GetComponent<Animator>();
         myTransform = GetComponent<Transform>();
         myRigidbody = GetComponent<Rigidbody2D>();
         ChangeDirection();
     }
     void Update()
     {
-        NPCMove();
+        if(!playerInRange)
+        {
+            NPCMove();
+        }
     }
     void UpdateAnimation()
     {
@@ -49,6 +53,26 @@ public class BoundedNPC : Interactables
     }
     private void NPCMove()
     {
-        myRigidbody.MovePosition(myTransform.position + npcDirection * speed * Time.deltaTime);
+        Vector3 temp = myTransform.position + npcDirection * speed * Time.deltaTime;
+        if (bounds.bounds.Contains(temp))
+        {
+            myRigidbody.MovePosition(temp);
+        }
+        else
+        {
+            ChangeDirection();
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector3 temp = npcDirection;
+        ChangeDirection();
+        int loops = 0;
+        while(temp == npcDirection && loops < 50)
+        {
+            loops++;
+            ChangeDirection();
+        }
+
     }
 }
