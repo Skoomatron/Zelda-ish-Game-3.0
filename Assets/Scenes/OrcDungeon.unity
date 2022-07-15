@@ -37170,6 +37170,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765759410}
   m_CullTransparentMesh: 1
+--- !u!1 &1799514066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1799514068}
+  - component: {fileID: 1799514067}
+  m_Layer: 0
+  m_Name: TimelineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1799514067
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799514066}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 29dec9f4050f7486b81efc954e762dd7, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7437403900332448040, guid: 29dec9f4050f7486b81efc954e762dd7, type: 2}
+    value: {fileID: 1956183066}
+  - key: {fileID: -7295251139807865005, guid: 29dec9f4050f7486b81efc954e762dd7, type: 2}
+    value: {fileID: 1956183066}
+  - key: {fileID: 1718280613595875640, guid: 29dec9f4050f7486b81efc954e762dd7, type: 2}
+    value: {fileID: 1955099002}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1799514068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799514066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.78565425, y: -31.118322, z: -15.53968}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837194700
 GameObject:
   m_ObjectHideFlags: 0
@@ -60279,6 +60334,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6881414925711739027, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
   m_PrefabInstance: {fileID: 1956183058}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1956183066 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6881414925711739031, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
+  m_PrefabInstance: {fileID: 1956183058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2009237423
 GameObject:
   m_ObjectHideFlags: 0
@@ -60821,6 +60881,18 @@ PrefabInstance:
     - target: {fileID: 6691797335465376470, guid: 7c5adcfb897a644c3936f840638052da, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -31.299988
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691797335650349888, guid: 7c5adcfb897a644c3936f840638052da, type: 3}
+      propertyPath: m_Text
+      value: Hmmm, a cave full of Orcs?  What could this hammer be for?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691797335650349888, guid: 7c5adcfb897a644c3936f840638052da, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    - target: {fileID: 6691797335650349888, guid: 7c5adcfb897a644c3936f840638052da, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8869812171626317542, guid: 7c5adcfb897a644c3936f840638052da, type: 3}
       propertyPath: m_AnchorMax.x
