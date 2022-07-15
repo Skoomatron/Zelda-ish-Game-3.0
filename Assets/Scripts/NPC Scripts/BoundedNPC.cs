@@ -6,12 +6,24 @@ public class BoundedNPC : Interactables
 {
     private Vector3 npcDirection;
     private Transform myTransform;
-    private Rigibody2d myRigidbody;
+    private Rigidbody2D myRigidbody;
+    private Animator animator;
     public float speed;
     void Start()
     {
+        animator = GetComponent<animator>();
         myTransform = GetComponent<Transform>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        ChangeDirection();
+    }
+    void Update()
+    {
+        NPCMove();
+    }
+    void UpdateAnimation()
+    {
+        animator.SetFloat("MoveX", npcDirection.x);
+        animator.SetFloat("MoveY", npcDirection.y);
     }
     private void ChangeDirection()
     {
@@ -31,7 +43,9 @@ public class BoundedNPC : Interactables
                 npcDirection = Vector3.down;
                 break;
             default:
+                break;
         }
+        UpdateAnimation();
     }
     private void NPCMove()
     {
