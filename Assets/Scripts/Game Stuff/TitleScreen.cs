@@ -7,7 +7,7 @@ public class TitleScreen : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneManager.LoadScene("MainIsland");
+        SceneManager.LoadScene("OrcDungeon");
     }
     public void LoadGame()
     {
