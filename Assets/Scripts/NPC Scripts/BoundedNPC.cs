@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoundedNPC : Interactables
+public class BoundedNPC : Sign
 {
     private Vector3 npcDirection;
     private Transform myTransform;
@@ -28,14 +28,15 @@ public class BoundedNPC : Interactables
         myRigidbody = GetComponent<Rigidbody2D>();
         ChangeDirection();
     }
-    void Update()
+    public override void Update()
     {
+        base.Update();
         if (moving)
         {
             moveDecay -= Time.deltaTime;
             if (moveDecay <= 0)
             {
-                moveDecay = moveTime;
+                moveDecay = Random.Range(minMoveTime, maxMoveTime);
                 moving = false;
             }
             if(!playerInRange)
@@ -49,7 +50,7 @@ public class BoundedNPC : Interactables
             if (waitDecay <= 0)
             {
                 moving = true;
-                waitDecay = waitTime;
+                waitDecay = Random.Range(minWaitTime, maxWaitTime);
                 ChooseDifferentDir();
             }
         }

@@ -8,7 +8,7 @@ public class Sign : Interactables
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
-    void Update()
+    public virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
