@@ -657,6 +657,12 @@ MonoBehaviour:
   playerHit: {fileID: 0}
   reduceMagic: {fileID: 0}
   projectile: {fileID: 0}
+  flashColor: {r: 0.990566, g: 0, b: 0, a: 0.40392157}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.07
+  numberOfFlashes: 4
+  flashTrigger: {fileID: 6881414925711739024}
+  mySprite: {fileID: 6881414925711739020}
 --- !u!50 &6881414925711739025
 Rigidbody2D:
   serializedVersion: 4

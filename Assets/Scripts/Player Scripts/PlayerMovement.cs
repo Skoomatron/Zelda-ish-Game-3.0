@@ -30,6 +30,13 @@ public class PlayerMovement : MonoBehaviour
     public SignalClass playerHit;
     public SignalClass reduceMagic;
     public GameObject projectile;
+    [Header("Invunerability Frame Variables")]
+    public Color flashColor;
+    public Color defaultColor;
+    public float flashDuration;
+    public int numberOfFlashes;
+    public Collider2D flashTrigger;
+    public SpriteRenderer mySprite;
 
     void Start()
     {
@@ -166,10 +173,25 @@ public class PlayerMovement : MonoBehaviour
         playerHit.Raise();
         if (myRigidbody != null)
         {
+            StartCoroutine(FlashCo());
             yield return new WaitForSeconds(knockTime);
             myRigidbody.velocity = Vector2.zero;
             currentState = PlayerState.idle;
             myRigidbody.velocity = Vector2.zero;
         }
+    }
+    private IEnumerator FlashCo()
+    {
+        int temp = 0;
+        flashTrigger.enabled = false;
+        while (temp < numberOfFlashes)
+        {
+            mySprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            mySprite.color = defaultColor;
+            yield return new WaitForSeconds(flashDuration);
+            temp++;
+        }
+        flashTrigger.enabled = true;
     }
 }
