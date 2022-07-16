@@ -48,6 +48,7 @@ public class BoundedNPC : Interactables
             {
                 moving = true;
                 waitDecay = waitTime;
+                ChooseDifferentDir();
             }
         }
     }
@@ -55,6 +56,17 @@ public class BoundedNPC : Interactables
     {
         animator.SetFloat("MoveX", npcDirection.x);
         animator.SetFloat("MoveY", npcDirection.y);
+    }
+    private void ChooseDifferentDir()
+    {
+        Vector3 temp = npcDirection;
+        ChangeDirection();
+        int loops = 0;
+        while(temp == npcDirection && loops < 50)
+        {
+            loops++;
+            ChangeDirection();
+        }
     }
     private void ChangeDirection()
     {
@@ -92,14 +104,6 @@ public class BoundedNPC : Interactables
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector3 temp = npcDirection;
-        ChangeDirection();
-        int loops = 0;
-        while(temp == npcDirection && loops < 50)
-        {
-            loops++;
-            ChangeDirection();
-        }
-
+        ChooseDifferentDir();
     }
 }

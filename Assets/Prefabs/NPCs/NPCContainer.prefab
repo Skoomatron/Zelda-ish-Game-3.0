@@ -179,6 +179,8 @@ MonoBehaviour:
   playerInRange: 0
   bounds: {fileID: 3496258422083259203}
   speed: 3
+  moveTime: 2
+  waitTime: 1
 --- !u!61 &3496258421735254146
 BoxCollider2D:
   m_ObjectHideFlags: 0
