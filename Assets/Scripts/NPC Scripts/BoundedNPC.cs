@@ -13,14 +13,16 @@ public class BoundedNPC : Interactables
     public Collider2D bounds;
     [Header("Move Variables")]
     public float speed;
-    public float moveTime;
-    public float waitTime;
+    public float minMoveTime;
+    public float maxMoveTime;
+    public float minWaitTime;
+    public float maxWaitTime;
     private float moveDecay;
     private float waitDecay;
     void Start()
     {
-        waitDecay = waitTime;
-        moveDecay = moveTime;
+        waitDecay = Random.Range(minWaitTime, maxWaitTime);
+        moveDecay = Random.Range(minMoveTime, maxMoveTime);
         animator = GetComponent<Animator>();
         myTransform = GetComponent<Transform>();
         myRigidbody = GetComponent<Rigidbody2D>();
