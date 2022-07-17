@@ -36127,6 +36127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1023093010}
+  - component: {fileID: 1023093011}
   m_Layer: 0
   m_Name: GameSaveManager
   m_TagString: Untagged
@@ -36149,6 +36150,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1023093011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023093009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2e7724b61884cbe9ed574db6ae6d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 11400000, guid: ab84700df6ef84182a7d3a391dcbd49f, type: 2}
 --- !u!1 &1030076568
 GameObject:
   m_ObjectHideFlags: 0
@@ -36457,7 +36472,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2978345617395150648, guid: 867f2193c4ccc4c7cb662d8cb10a6027, type: 3}
       propertyPath: m_Name
-      value: Main Camera (1)
+      value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 2978345617395150651, guid: 867f2193c4ccc4c7cb662d8cb10a6027, type: 3}
       propertyPath: m_CullingMask.m_Bits

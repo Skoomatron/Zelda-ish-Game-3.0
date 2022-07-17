@@ -5,8 +5,10 @@ using UnityEngine;
 public class GameSaveManager : MonoBehaviour
 {
     public static GameSaveManager gameSave;
+    public List<ScriptableObject> objects = new List<ScriptableObject>();
     private void Awake()
     {
+        // singleton pattern
         if (gameSave == null)
         {
             gameSave = this;
@@ -15,6 +17,8 @@ public class GameSaveManager : MonoBehaviour
         {
             Destroy(this);
         }
+        DontDestroyOnLoad(this.gameObject);
+        // end of singleton pattern
     }
     void Start()
     {
