@@ -1,33 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 public class GameSaveManager : MonoBehaviour
 {
     public static GameSaveManager gameSave;
     public List<ScriptableObject> objects = new List<ScriptableObject>();
-    // private void Awake()
-    // {
-    //     // singleton pattern
-    //     if (gameSave == null)
-    //     {
-    //         gameSave = this;
-    //     }
-    //     else
-    //     {
-    //         Destroy(this.gameObject);
-    //     }
-    //     DontDestroyOnLoad(this);
-    //     // end of singleton pattern
-    // }
-    // void Start()
-    // {
-
-    // }
-    // void Update()
-    // {
-
-    // }
+    private void OnEnable()
+    {
+        LoadScriptables();
+    }
+    private void OnDisable()
+    {
+        SaveScriptables();
+    }
     public void SaveScriptables()
     {
         for (int i = 0; i < objects.Count; i++)
@@ -41,6 +30,15 @@ public class GameSaveManager : MonoBehaviour
     }
     public void LoadScriptables()
     {
-
+        for (int i = 0; i < objects.Count; i++)
+        {
+            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.dat", i)))
+            {
+                FileStream file = File.Open(Application.persistentDataPath + string.Format("/{0}.dat", i), FileMode.Open);
+                BinaryFormatter binary = new BinaryFormatter();
+                JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), objects[i]);
+                file.Close();
+            }
+        }
     }
 }
