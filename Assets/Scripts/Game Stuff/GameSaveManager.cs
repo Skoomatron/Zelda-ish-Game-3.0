@@ -18,14 +18,14 @@ public class GameSaveManager : MonoBehaviour
             }
         }
     }
-    private void OnEnable()
-    {
-        LoadScriptables();
-    }
-    private void OnDisable()
-    {
-        SaveScriptables();
-    }
+    // private void OnEnable()
+    // {
+    //     LoadScriptables();
+    // }
+    // private void OnDisable()
+    // {
+    //     SaveScriptables();
+    // }
     public void SaveScriptables()
     {
         for (int i = 0; i < objects.Count; i++)
