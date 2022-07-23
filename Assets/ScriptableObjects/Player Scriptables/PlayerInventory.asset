@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
   items: []
-  numberOfKeyItems: 6
-  diamonds: 13
+  numberOfKeyItems: 0
+  diamonds: 2
   currentMagic: 10
   maxMagic: 10
