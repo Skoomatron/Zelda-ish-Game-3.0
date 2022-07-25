@@ -5,13 +5,18 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Inventory Information")]
+    [SerializeField] private GameOject blankInventorySlot;
+    [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private GameObject useButton;
+
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
