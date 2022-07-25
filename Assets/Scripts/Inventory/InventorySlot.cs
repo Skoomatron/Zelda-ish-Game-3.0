@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Item UI Parameters")]
+    [SerializeField] private TextMeshProUGUI itemNumberText;
+    [SerializeField] private Image itemImage;
+    [Header("Item Variables")]
+    public Sprite itemSprite;
+    public int numberHeld;
+    public string itemDescription;
+    public InventoryItem thisItem;
+    public InventoryManager thisManager;
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
