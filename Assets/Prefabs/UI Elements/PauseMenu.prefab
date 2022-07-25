@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.1354, y: -0.000018553019}
-  m_SizeDelta: {x: -479.9154, y: 105}
+  m_SizeDelta: {x: -479.9154, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1196166977609646678
 MonoBehaviour:
@@ -479,6 +479,7 @@ GameObject:
   - component: {fileID: 1534109079779507732}
   - component: {fileID: 4095040835852474491}
   - component: {fileID: 6825523788968223140}
+  - component: {fileID: 4364650111447986252}
   m_Layer: 5
   m_Name: Inventory Panel
   m_TagString: Untagged
@@ -547,6 +548,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4364650111447986252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511752795785242447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708cf46f45dc14cd881133a5749df013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1894759120629886893
 GameObject:
   m_ObjectHideFlags: 0
