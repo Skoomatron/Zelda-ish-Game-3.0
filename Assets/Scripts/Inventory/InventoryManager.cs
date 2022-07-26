@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     [Header("Inventory Information")]
+    public PlayerInventory playerInventory;
     [SerializeField] private GameObject blankInventorySlot;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private TextMeshProUGUI descriptionText;
@@ -22,6 +23,18 @@ public class InventoryManager : MonoBehaviour
         else
         {
             useButton.SetActive(false);
+        }
+    }
+    void MakeInventorySlot()
+    {
+        if(playerInventory)
+        {
+            for (int i = 0; i < playerInventory.myInventory.Count; i++)
+            {
+                InventorySlot newSlot = Instantiate(blankInventorySlot, transform.rotation).GetComponent<InventorySlot>();
+                newSlot.transform.SetParent(inventoryPanel.transform);
+                newSlot.Setup(playerInventory.myInventory[i], this);
+            }
         }
     }
     void Start()
