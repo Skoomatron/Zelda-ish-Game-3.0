@@ -23,13 +23,11 @@ public class InventorySlot : MonoBehaviour
             itemNumberText.text = "" + thisItem.numberHeld;
         }
     }
-    void Start()
+    public void ClickedItem()
     {
-
-    }
-
-    void Update()
-    {
-
+        if (thisItem)
+        {
+            thisManager.SetupDescriptionAndButton(thisItem.itemDescription, thisItem.usable, thisItem);
+        }
     }
 }

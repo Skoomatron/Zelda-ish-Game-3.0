@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private GameObject useButton;
+    public InventoryItem currentItem;
 
     public void SetTextAndButton(string description, bool buttonActive)
     {
@@ -46,9 +47,10 @@ public class InventoryManager : MonoBehaviour
         MakeInventorySlot();
         SetTextAndButton("", false);
     }
-
-    void Update()
+    public void SetupDescriptionAndButton(string itemDescription, bool usable, InventoryItem newItem)
     {
-
+        currentItem = newItem;
+        descriptionText.text = itemDescription;
+        useButton.SetActive(usable);
     }
 }
