@@ -560,6 +560,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708cf46f45dc14cd881133a5749df013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blankInventorySlot: {fileID: 0}
+  inventoryPanel: {fileID: 0}
+  descriptionText: {fileID: 0}
+  useButton: {fileID: 0}
 --- !u!1 &1894759120629886893
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +820,7 @@ GameObject:
   - component: {fileID: 7790814368361248202}
   - component: {fileID: 4121263325727811578}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Use Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1072,7 +1076,7 @@ GameObject:
   - component: {fileID: 4250666291649457150}
   - component: {fileID: 342359020249430543}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Description Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
