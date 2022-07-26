@@ -31,14 +31,19 @@ public class InventoryManager : MonoBehaviour
         {
             for (int i = 0; i < playerInventory.myInventory.Count; i++)
             {
-                InventorySlot newSlot = Instantiate(blankInventorySlot, transform.rotation).GetComponent<InventorySlot>();
-                newSlot.transform.SetParent(inventoryPanel.transform);
-                newSlot.Setup(playerInventory.myInventory[i], this);
+                GameObject temp = Instantiate(blankInventorySlot, inventoryPanel.transform.position, Quaternion.identity);
+                temp.transform.SetParent(inventoryPanel.transform);
+                InventorySlot newSlot = temp.GetComponent<InventorySlot>();
+                if (newSlot)
+                {
+                    newSlot.Setup(playerInventory.myInventory[i], this);
+                }
             }
         }
     }
     void Start()
     {
+        MakeInventorySlot();
         SetTextAndButton("", false);
     }
 
