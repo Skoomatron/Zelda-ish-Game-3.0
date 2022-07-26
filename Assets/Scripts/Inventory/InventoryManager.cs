@@ -53,4 +53,11 @@ public class InventoryManager : MonoBehaviour
         descriptionText.text = itemDescription;
         useButton.SetActive(usable);
     }
+    public void UseButtonPressed()
+    {
+        if (currentItem)
+        {
+            currentItem.Use();
+        }
+    }
 }

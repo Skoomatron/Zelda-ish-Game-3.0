@@ -128,6 +128,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3496258421291632841, guid: 3520a8876115b42e3b2ef64d30499f4d, type: 3}
   m_PrefabInstance: {fileID: 3496258421183593666}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &167747364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4364650111447986252, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+  m_PrefabInstance: {fileID: 6227169687531601843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708cf46f45dc14cd881133a5749df013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &249600566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3120193908637340397, guid: 0dfc499af05134165ab2362dc37d16d0, type: 3}
@@ -60786,6 +60797,34 @@ PrefabInstance:
       value: GameSaveManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4086165413259795421, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121263325727811578, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121263325727811578, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121263325727811578, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 167747364}
+    - target: {fileID: 4121263325727811578, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121263325727811578, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UseButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121263325727811578, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121263325727811578, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
