@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Health Potion
   itemDescription: Tastes awful.  Works great.
   itemImage: {fileID: 1232447163, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
-  numberHeld: 5
+  numberHeld: 20
   usable: 1
   unique: 0
   thisEvent:
