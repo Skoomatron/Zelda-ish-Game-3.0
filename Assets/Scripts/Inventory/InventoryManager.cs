@@ -53,11 +53,20 @@ public class InventoryManager : MonoBehaviour
         descriptionText.text = itemDescription;
         useButton.SetActive(usable);
     }
+    void ClearInventorySlots()
+    {
+        for (int i = 0; i < inventoryPanel.transform.childCount; i++)
+        {
+            Destroy(inventoryPanel.transform.GetChild[i].gameObject);
+        }
+    }
     public void UseButtonPressed()
     {
         if (currentItem)
         {
             currentItem.Use();
+            ClearInventorySlots();
+            MakeInventorySlot();
         }
     }
 }
