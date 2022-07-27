@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec27dae886264bb99164b7ff95b89e9, type: 3}
+  m_Name: Health Potion
+  m_EditorClassIdentifier: 
+  itemName: Health Potion
+  itemDescription: Tastes awful.  Works great.
+  itemImage: {fileID: 1232447163, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
+  numberHeld: 0
+  usable: 1
+  unique: 0
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls: []
