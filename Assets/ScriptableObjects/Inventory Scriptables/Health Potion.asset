@@ -15,9 +15,21 @@ MonoBehaviour:
   itemName: Health Potion
   itemDescription: Tastes awful.  Works great.
   itemImage: {fileID: 1232447163, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
-  numberHeld: 0
+  numberHeld: 1
   usable: 1
   unique: 0
   thisEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3404985421913425452, guid: bd549941c0dea46afa9b01bfce9836cd, type: 3}
+        m_TargetAssemblyTypeName: HealthReaction, Assembly-CSharp
+        m_MethodName: Use
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

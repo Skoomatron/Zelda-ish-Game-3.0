@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Wooden Bow
   itemDescription: It ain't much but it shoot.
   itemImage: {fileID: -575583485, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
-  numberHeld: 0
+  numberHeld: 1
   usable: 0
   unique: 0
   thisEvent:

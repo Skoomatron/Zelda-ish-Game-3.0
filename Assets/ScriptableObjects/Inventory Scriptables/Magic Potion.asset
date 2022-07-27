@@ -15,9 +15,21 @@ MonoBehaviour:
   itemName: Magic Cauldron
   itemDescription: Steamy. Smelly. Magical.
   itemImage: {fileID: 1006940148, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
-  numberHeld: 0
+  numberHeld: 1
   usable: 1
   unique: 0
   thisEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1649101711436728414, guid: d708fe6edad634f3b85d0f1823ca82fa, type: 3}
+        m_TargetAssemblyTypeName: MagicReaction, Assembly-CSharp
+        m_MethodName: Use
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
