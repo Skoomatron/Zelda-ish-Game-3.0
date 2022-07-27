@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
         {
             for (int i = 0; i < playerInventory.myInventory.Count; i++)
             {
-                if (playerInventory.myInventory[i] > 0)
+                if (playerInventory.myInventory[i].numberHeld > 0)
                 {
                     GameObject temp = Instantiate(blankInventorySlot, inventoryPanel.transform.position, Quaternion.identity);
                     temp.transform.SetParent(inventoryPanel.transform);
@@ -70,6 +70,10 @@ public class InventoryManager : MonoBehaviour
             currentItem.Use();
             ClearInventorySlots();
             MakeInventorySlot();
+            if (currentItem.numberHeld == 0)
+            {
+                SetTextAndButton("", false);
+            }
         }
     }
 }
