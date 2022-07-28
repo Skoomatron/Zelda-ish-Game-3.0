@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class CollectableInventoryItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private InventoryItem thisItem;
 
-    // Update is called once per frame
-    void Update()
+    void AddItemToInventory()
     {
-        
+        if (playerInventory && thisItem)
+        {
+            if (playerInventory.myInventory.Contains(thisItem))
+            {
+                thisItem.numberHeld++;
+            }
+            else
+            {
+                playerInventory.myInventory.Add(thisItem);
+            }
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            AddItemToInventory();
+            Destroy(this.gameObject);
+        }
     }
 }
