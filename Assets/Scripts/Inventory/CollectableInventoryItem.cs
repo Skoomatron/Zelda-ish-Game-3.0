@@ -18,12 +18,13 @@ public class CollectableInventoryItem : MonoBehaviour
             else
             {
                 playerInventory.myInventory.Add(thisItem);
+                thisItem.numberHeld++;
             }
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")  && !collision.isTrigger)
         {
             AddItemToInventory();
             Destroy(this.gameObject);
