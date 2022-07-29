@@ -47,6 +47,7 @@ public class InventoryManager : MonoBehaviour
     }
     void Start()
     {
+        Debug.Log("Making an Inventory");
         MakeInventorySlot();
         SetTextAndButton("", false);
     }
