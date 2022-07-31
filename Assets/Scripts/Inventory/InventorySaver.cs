@@ -9,6 +9,7 @@ public class InventorySaver : MonoBehaviour
     [SerializeField] private PlayerInventory myInventory;
     private void OnEnable()
     {
+        myInventory.myInventory.Clear();
         LoadScriptables();
     }
     private void OnDisable()
@@ -30,22 +31,22 @@ public class InventorySaver : MonoBehaviour
         {
             FileStream file = File.Create(Application.persistentDataPath + string.Format("/{0}.inv", i));
             BinaryFormatter binary = new BinaryFormatter();
-            var json = JsonUtility.ToJson(myInventory[i]);
+            var json = JsonUtility.ToJson(myInventory.myInventory[i]);
             binary.Serialize(file, json);
             file.Close();
         }
     }
     public void LoadScriptables()
     {
-        for (int i = 0; i < myInventory.myInventory.Count; i++)
+        int i = 0;
+        while (File.Exists(Application.persistentDataPath + string.Format("/{0}.inv", i)))
         {
-            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.inv", i)))
-            {
-                FileStream file = File.Open(Application.persistentDataPath + string.Format("/{0}.inv", i), FileMode.Open);
-                BinaryFormatter binary = new BinaryFormatter();
-                JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), myInventory[i]);
-                file.Close();
-            }
+            FileStream file = File.Open(Application.persistentDataPath + string.Format("/{0}.inv", i), FileMode.Open);
+            BinaryFormatter binary = new BinaryFormatter();
+            JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), myInventory.myInventory[i]);
+            file.Close();
+            i++;
         }
     }
+
 }
