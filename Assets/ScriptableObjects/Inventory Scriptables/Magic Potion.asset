@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Magic Cauldron
   itemDescription: Steamy. Smelly. Magical.
   itemImage: {fileID: 1006940148, guid: 1c7928699112e4769a4be28d8b690e38, type: 3}
-  numberHeld: 1
+  numberHeld: 0
   usable: 1
   unique: 0
   thisEvent:
