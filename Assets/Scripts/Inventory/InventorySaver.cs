@@ -16,17 +16,19 @@ public class InventorySaver : MonoBehaviour
     {
         SaveScriptables();
     }
-    public void ResetScriptables() {
-        for (int i = 0; i < myInventory.myInventory.Count; i++)
+    public void ResetScriptables()
+    {
+        int i = 0;
+        while (File.Exists(Application.persistentDataPath + string.Format("/{0}.inv", i)))
         {
-            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.inv", i)))
-            {
-                File.Delete(Application.persistentDataPath + string.Format("/{0}.inv", i));
-            }
+            File.Delete(Application.persistentDataPath + string.Format("/{0}.inv", i));
+            i++;
         }
+
     }
     public void SaveScriptables()
     {
+        ResetScriptables();
         for (int i = 0; i < myInventory.myInventory.Count; i++)
         {
             FileStream file = File.Create(Application.persistentDataPath + string.Format("/{0}.inv", i));
@@ -41,10 +43,12 @@ public class InventorySaver : MonoBehaviour
         int i = 0;
         while (File.Exists(Application.persistentDataPath + string.Format("/{0}.inv", i)))
         {
+            var temp = ScriptableObject.CreateInstance<InventoryItem>();
             FileStream file = File.Open(Application.persistentDataPath + string.Format("/{0}.inv", i), FileMode.Open);
             BinaryFormatter binary = new BinaryFormatter();
-            JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), myInventory.myInventory[i]);
+            JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), temp);
             file.Close();
+            myInventory.myInventory.Add(temp);
             i++;
         }
     }
