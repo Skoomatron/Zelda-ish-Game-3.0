@@ -16,9 +16,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     private Animator animator;
     public PlayerState currentState;
-    [Header("Health Variables")]
-    public FloatValue currentHealth;
-    public SignalClass playerHealthSignal;
+
+    // [Header("Health Variables")]
+    // public FloatValue currentHealth;
+    // public SignalClass playerHealthSignal;
+
     [Header("Position and Movement")]
     public float speed;
     public VectorValue startingPosition;
@@ -156,16 +158,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void Knock(float knockTime, float damage)
     {
-        currentHealth.runtimeValue -= damage;
-        playerHealthSignal.Raise();
-        if (currentHealth.runtimeValue > 0)
-        {
-            StartCoroutine(KnockCo(knockTime));
-        }
-        else
-        {
-            this.gameObject.SetActive(false);
-        }
+        StartCoroutine(KnockCo(knockTime));
+        // currentHealth.runtimeValue -= damage;
+        // playerHealthSignal.Raise();
+        // if (currentHealth.runtimeValue > 0)
+        // {
+        // }
+        // else
+        // {
+        //     this.gameObject.SetActive(false);
+        // }
     }
 
     private IEnumerator KnockCo(float knockTime)
