@@ -60085,6 +60085,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e283c86c333b24bef9585f38a0f2fcd4, type: 2}
     - target: {fileID: 6881414925711739026, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
+      propertyPath: speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881414925711739026, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
       propertyPath: playerHit
       value: 
       objectReference: {fileID: 11400000, guid: 6a3bbaaed1383428a81d50ec2e8e06eb, type: 2}
@@ -60898,7 +60902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1534109079779507732, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -9.325806
+      value: -9.325836
       objectReference: {fileID: 0}
     - target: {fileID: 1718140869444059488, guid: 9f8e4b27ea9ab4ef68208daea6fc2460, type: 3}
       propertyPath: m_AnchorMax.y
