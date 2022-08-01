@@ -18,4 +18,20 @@ public class GenericHealth : MonoBehaviour
             currentHealth = maxHealth.RuntimeValue;
         }
     }
+    public void FullHeal()
+    {
+        currentHealth = maxHealth.RuntimeValue;
+    }
+    public void InstantDeath()
+    {
+        currentHealth = 0;
+    }
+    public void Damage(float damageAmount)
+    {
+        currentHealth -= damageAmount;
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+    }
 }
