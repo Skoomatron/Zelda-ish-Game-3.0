@@ -8,25 +8,25 @@ public class GenericHealth : MonoBehaviour
     [SerializeField] private float currentHealth;
     void Start()
     {
-        currentHealth = maxHealth.RuntimeValue;
+        currentHealth = maxHealth.runtimeValue;
     }
-    public void Heal(float amountHealed)
+    public virtual void Heal(float amountHealed)
     {
         currentHealth += amountHealed;
-        if (currentHealth > maxHealth.RuntimeValue)
+        if (currentHealth > maxHealth.runtimeValue)
         {
-            currentHealth = maxHealth.RuntimeValue;
+            currentHealth = maxHealth.runtimeValue;
         }
     }
-    public void FullHeal()
+    public virtual void FullHeal()
     {
-        currentHealth = maxHealth.RuntimeValue;
+        currentHealth = maxHealth.runtimeValue;
     }
-    public void InstantDeath()
+    public virtual void InstantDeath()
     {
         currentHealth = 0;
     }
-    public void Damage(float damageAmount)
+    public virtual void Damage(float damageAmount)
     {
         currentHealth -= damageAmount;
         if (currentHealth < 0)
