@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class GenericHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public FloatValue maxHealth;
+    [SerializeField] private float currentHealth;
     void Start()
     {
-        
+        currentHealth = maxHealth.RuntimeValue;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Heal(float amountHealed)
     {
-        
+        currentHealth += amountHealed;
+        if (currentHealth > maxHealth.RuntimeValue)
+        {
+            currentHealth = maxHealth.RuntimeValue;
+        }
     }
 }
