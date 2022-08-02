@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 183417156}
   - component: {fileID: 183417155}
   - component: {fileID: 183417154}
+  - component: {fileID: 183417158}
   m_Layer: 0
   m_Name: TestDamage
   m_TagString: Untagged
@@ -265,6 +266,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &183417158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183417153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8c76406cb1c492d9d182f31c96f2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 2
+  knockTime: 0.5
+  collisionTag: Player
 --- !u!4 &249600566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3120193908637340397, guid: 0dfc499af05134165ab2362dc37d16d0, type: 3}
