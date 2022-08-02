@@ -8,6 +8,7 @@ public class PlayerHealth : GenericHealth
     public override void Damage(float damageAmount)
     {
         base.Damage(damageAmount);
+        maxHealth.runtimeValue = currentHealth;
         healthSignal.Raise();
     }
 }

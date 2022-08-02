@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenericHealth : MonoBehaviour
 {
     public FloatValue maxHealth;
-    [SerializeField] private float currentHealth;
+    public float currentHealth;
     void Start()
     {
         currentHealth = maxHealth.runtimeValue;
