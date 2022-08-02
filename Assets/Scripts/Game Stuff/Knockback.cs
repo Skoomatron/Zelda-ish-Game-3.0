@@ -17,9 +17,9 @@ public class Knockback : MonoBehaviour
         // {
         //     collision.GetComponent<PotSmashing>().Smash();
         // }
-        if (collision.gameObject.CompareTag(collisionTag))
+        if (collision.gameObject.CompareTag(collisionTag) && collision.isTrigger)
         {
-            Rigidbody2D hit = collision.GetComponent<Rigidbody2D>();
+            Rigidbody2D hit = collision.GetComponentInParent<Rigidbody2D>();
             if (hit != null)
             {
                 Vector3 differential = hit.transform.position - transform.position;
