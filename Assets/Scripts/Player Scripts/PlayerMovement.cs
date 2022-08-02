@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
         );
     }
 
-    public void Knock(float knockTime, float damage)
+    public void Knock(float knockTime)
     {
         StartCoroutine(KnockCo(knockTime));
         // currentHealth.runtimeValue -= damage;
