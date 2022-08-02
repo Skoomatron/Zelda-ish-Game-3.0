@@ -25,19 +25,19 @@ public class Knockback : MonoBehaviour
                 Vector3 differential = hit.transform.position - transform.position;
                 differential = differential.normalized * thrust;
                 hit.DOMove(hit.transform.position + differential, knockTime);
-                if (collision.gameObject.CompareTag("Enemies") && collision.isTrigger)
-                {
-                    hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
-                    collision.GetComponent<Enemy>().Knock(hit, knockTime);
-                }
-                if (collision.gameObject.CompareTag("Player"))
-                {
-                    if (collision.GetComponent<PlayerMovement>().currentState != PlayerState.stagger)
+                // if (collision.gameObject.CompareTag("Enemies") && collision.isTrigger)
+                // {
+                //     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
+                //     collision.GetComponent<Enemy>().Knock(hit, knockTime);
+                // }
+                // if (collision.gameObject.CompareTag("Player"))
+                // {
+                    if (collision.GetComponentInParent<PlayerMovement>().currentState != PlayerState.stagger)
                     {
                         hit.GetComponent<PlayerMovement>().currentState = PlayerState.stagger;
-                        collision.GetComponent<PlayerMovement>().Knock(knockTime);
+                        collision.GetComponentInParent<PlayerMovement>().Knock(knockTime);
                     }
-                }
+                // }
             }
         }
     }
