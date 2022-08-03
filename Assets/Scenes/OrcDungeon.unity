@@ -60190,6 +60190,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 937462386}
     m_Modifications:
+    - target: {fileID: 5240124452482933017, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6621899333305199872, guid: 1d5e481b1510b44f28f6e6a743f9b231, type: 3}
       propertyPath: maxHealth
       value: 
