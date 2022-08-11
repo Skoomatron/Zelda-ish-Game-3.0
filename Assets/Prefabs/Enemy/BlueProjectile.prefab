@@ -186,4 +186,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 1
   knockTime: 0.3
-  damage: 1
+  collisionTag: Player
